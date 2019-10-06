@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>892887036275-m8mboabpcu2qtadku3p77slp9a2i0hfn.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.892887036275-m8mboabpcu2qtadku3p77slp9a2i0hfn</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDgBU86xO4fwaO2dHdnSKXaPPIGlo68SW8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>892887036275</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.xyneq.thinkwith</string>
+	<key>PROJECT_ID</key>
+	<string>thinkwith-b4627</string>
+	<key>STORAGE_BUCKET</key>
+	<string>thinkwith-b4627.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:892887036275:ios:887cf36e6762d4cd44d506</string>
+	<key>DATABASE_URL</key>
+	<string>https://thinkwith-b4627.firebaseio.com</string>
+</dict>
+</plist>

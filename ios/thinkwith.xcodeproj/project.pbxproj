@@ -20,6 +20,7 @@
 		581F2587D4FDEC9EFCA26759 /* libPods-thinkwith.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6074EACE5526E06DBCF59C /* libPods-thinkwith.a */; };
 		6F62F21714F786B67BB2141E /* libPods-thinkwith-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04673E6BA9782938B531F40D /* libPods-thinkwith-tvOSTests.a */; };
 		A57179FC711D3C85C652FDB0 /* libPods-thinkwith-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DA9B96AB32CA1638133D87B /* libPods-thinkwith-tvOS.a */; };
+		DCE4018B2349D185009A2C53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCE4018A2349D185009A2C53 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		7DF2379C16D822935015495D /* Pods-thinkwithTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thinkwithTests.release.xcconfig"; path = "Target Support Files/Pods-thinkwithTests/Pods-thinkwithTests.release.xcconfig"; sourceTree = "<group>"; };
 		9F145D92EFAB3B843009FBA0 /* Pods-thinkwith.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thinkwith.release.xcconfig"; path = "Target Support Files/Pods-thinkwith/Pods-thinkwith.release.xcconfig"; sourceTree = "<group>"; };
 		C9932F4907C3A206E46E3A7C /* Pods-thinkwith-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thinkwith-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-thinkwith-tvOSTests/Pods-thinkwith-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DCE4018A2349D185009A2C53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DF8CF04B4DC9AB00DDAABAFA /* Pods-thinkwith-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thinkwith-tvOS.release.xcconfig"; path = "Target Support Files/Pods-thinkwith-tvOS/Pods-thinkwith-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -174,6 +176,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				DCE4018A2349D185009A2C53 /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* thinkwith */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* thinkwithTests */,
@@ -342,6 +345,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				DCE4018B2349D185009A2C53 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,7 +654,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xyneq.thinkwith;
 				PRODUCT_NAME = thinkwith;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -670,7 +674,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xyneq.thinkwith;
 				PRODUCT_NAME = thinkwith;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
