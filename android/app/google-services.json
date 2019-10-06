@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "892887036275",
+    "firebase_url": "https://thinkwith-b4627.firebaseio.com",
+    "project_id": "thinkwith-b4627",
+    "storage_bucket": "thinkwith-b4627.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:892887036275:android:b3b57d793604634e44d506",
+        "android_client_info": {
+          "package_name": "com.thinkwith"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "892887036275-9ki5fr98el2iebn38asa8f0ourjs25je.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDo4f8FXvLiowWH7rWKfO8unsW71U-Oox0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "892887036275-9ki5fr98el2iebn38asa8f0ourjs25je.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
