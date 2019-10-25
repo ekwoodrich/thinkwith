@@ -8,13 +8,16 @@
 
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
-import {
-  createSwitchNavigator,
-  createStackNavigator,
-  createAppContainer
-} from "react-navigation";
 
 import firebase from '@react-native-firebase/app';
+import { createAppContainer, createSwitchNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+
+
+import AuthLoadingScreen from './screens/AuthLoadingScreen';
+import ProfileScreen from './screens/ProfileScreen';
+import HomeScreen from './screens/HomeScreen';
+import SignInScreen from './screens/SignInScreen';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\nCmd+D or shake for dev menu',
@@ -26,22 +29,22 @@ const firebaseCredentials = Platform.select({
   android: 'https://invertase.link/firebase-android',
 });
 
-export default class App extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native + Firebase!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-        {!firebase.apps.length && (
-          <Text style={styles.instructions}>
-            {`\nYou currently have no Firebase apps registered, this most likely means you've not downloaded your project credentials. Visit the link below to learn more. \n\n ${firebaseCredentials}`}
-          </Text>
-        )}
-      </View>
-    );
-  }
-}
+const AppStack = createStackNavigator({ Home: HomeScreen, Profile: ProfileScreen });
+const AuthStack = createStackNavigator({ SignIn: SignInScreen });
+
+
+export default createAppContainer(
+  createSwitchNavigator(
+    {
+      AuthLoading: AuthLoadingScreen,
+      App: AppStack,
+      Auth: AuthStack,
+    },
+    {
+      initialRouteName: 'AuthLoading',
+    }
+  )
+);
 
 const styles = StyleSheet.create({
   container: {
