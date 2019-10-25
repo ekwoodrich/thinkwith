@@ -939,6 +939,11 @@
   resolved "https://registry.yarnpkg.com/@react-native-firebase/app-types/-/app-types-6.0.0.tgz#f254a289db5acf83983107b5f4e6836f4bf8c220"
   integrity sha512-hrTQhrkhvLi9kquol/bFBgByfl3rwCk/kTPZ1ad2O3i+Iy0VgWHyFuo55HIMocVIe3471br++bao+Df1qBKTdQ==
 
+"@react-native-firebase/app-types@6.0.0-alpha.25":
+  version "6.0.0-alpha.25"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/app-types/-/app-types-6.0.0-alpha.25.tgz#b3da34754c06ad035499aa2e8372747ca413d295"
+  integrity sha512-GEGnfxEtfFPwU7ex8mRRPpJepStT3pDPRFwnkV237zCCYt+iaM7jniqN0xVGVfywo7A09j9jTfgLeyPHWrX/uQ==
+
 "@react-native-firebase/app@6.0.0":
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/@react-native-firebase/app/-/app-6.0.0.tgz#b60fc9da3f8af20ae0072abadde39f511c555f84"
@@ -947,6 +952,19 @@
     "@react-native-firebase/app-types" "6.0.0"
     opencollective-postinstall "^2.0.1"
     superstruct "^0.6.2"
+
+"@react-native-firebase/auth@^6.0.0-alpha.25":
+  version "6.0.0-alpha.25"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/auth/-/auth-6.0.0-alpha.25.tgz#26710e2429391dfc138298c69f7e431818aa1933"
+  integrity sha512-XcdTtd/8fPzWElq0JBQQcVKgqQCNybobOo9SD7KjNNOVvXuKIOXKB1l8S/M4YtKyrAc6luqoKF4g704RURZAtg==
+  dependencies:
+    "@react-native-firebase/app-types" "6.0.0-alpha.25"
+    "@react-native-firebase/common" "6.0.0-alpha.25"
+
+"@react-native-firebase/common@6.0.0-alpha.25":
+  version "6.0.0-alpha.25"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/common/-/common-6.0.0-alpha.25.tgz#e35b308a6ec90a3b27c59ff43bf92ba8e5c47f71"
+  integrity sha512-79UDyLaH19400Amuh4jTb4M6JpS8eZNOd2+SejV3HcjdTvg6dM77d4Cjz+/Wzp9gUv4KVnhvrkBka9STAIQ+wA==
 
 "@react-navigation/core@^3.5.1":
   version "3.5.1"
@@ -3103,6 +3121,11 @@ gud@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/gud/-/gud-1.0.0.tgz#a489581b17e6a70beca9abe3ae57de7a499852c0"
   integrity sha512-zGEOVKFM5sVPPrYs7J5/hYEw2Pof8KCyOwyhG8sAF26mCAeUFAcYPu1mwB7hhpIP29zOIBaDqwuHdLp0jvZXjw==
+
+hammerjs@^2.0.8:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/hammerjs/-/hammerjs-2.0.8.tgz#04ef77862cff2bb79d30f7692095930222bf60f1"
+  integrity sha1-BO93hiz/K7edMPdpIJWTAiK/YPE=
 
 handlebars@^4.1.2:
   version "4.4.2"
@@ -5647,6 +5670,16 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
+react-native-gesture-handler@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-1.4.1.tgz#c38d9e57637b95e221722a79f2bafac62e3aeb21"
+  integrity sha512-Ffcs+SbEbkGaal0CClYL+v7A9y4OA5G5lW01qrzjxaqASp5C8BfnWSKuqYKE00s6bLwE5L4xnlHkG0yIxAtbrQ==
+  dependencies:
+    hammerjs "^2.0.8"
+    hoist-non-react-statics "^2.3.1"
+    invariant "^2.2.4"
+    prop-types "^15.7.2"
+
 react-native-paper@^2.16.0:
   version "2.16.0"
   resolved "https://registry.yarnpkg.com/react-native-paper/-/react-native-paper-2.16.0.tgz#5a9edd5615bb010ec0d29cbfd5524c2944b2505d"
@@ -5658,6 +5691,11 @@ react-native-paper@^2.16.0:
     hoist-non-react-statics "^3.1.0"
     react-lifecycles-compat "^3.0.4"
     react-native-safe-area-view "^0.12.0"
+
+react-native-reanimated@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-1.3.0.tgz#581cdb0bd1ff05e7304b116af712ded0c7665ede"
+  integrity sha512-KFno6D0q09kx71IDuPa4qeC1t1msALsCMuli3/EN3YDf8XoM2CG53yzhVHMFtmcW0IUCySugHgxQiuT5BzwOPA==
 
 react-native-safe-area-view@^0.12.0:
   version "0.12.0"
@@ -5677,6 +5715,13 @@ react-native-safe-area-view@^0.14.1:
   version "1.0.0-alpha.23"
   resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-1.0.0-alpha.23.tgz#25d7ea4d11bda4fcde2d1da7ae50271c6aa636e0"
   integrity sha512-tOxHGQUN83MTmQB4ghoQkibqOdGiX4JQEmeyEv96MKWO/x8T2PJv84ECUos9hD3blPRQwVwSpAid1PPPhrVEaw==
+  dependencies:
+    debounce "^1.2.0"
+
+react-native-screens@^2.0.0-alpha.5:
+  version "2.0.0-alpha.5"
+  resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-2.0.0-alpha.5.tgz#5b6a72df959d31ffaf7045cd5eb753477e80689b"
+  integrity sha512-uKVc+JYEC59Dz2RPBI4tnaIB8W6T0dHGY6PjUtvkvaBmZBjfxhpezd3m2t8o913Xarx6EvT2maSH8816+MNJnw==
   dependencies:
     debounce "^1.2.0"
 
