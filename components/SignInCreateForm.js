@@ -49,7 +49,7 @@ class SignInCreateForm extends Component {
                 </Text>
                 <View style={styles.login}>
 
-                    <Button  icon="arrow-forward" contentStyle={styles.emailButton} mode="contained" color="#ed6b18" onPress={this._signInEmail}>
+                    <Button  icon="check" contentStyle={styles.emailButton} mode="contained" color="#ed6b18" onPress={this._signInEmail}>
                         Create Account
                     </Button>
                 </View>
