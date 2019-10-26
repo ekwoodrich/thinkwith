@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
-
-export default class HomeScreen extends Component {
+import { withNavigation } from 'react-navigation';
+import { Button } from 'react-native-paper';
+class HomeScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,8 +12,15 @@ export default class HomeScreen extends Component {
   render() {
     return (
       <View>
-        <Text> HomeScreen </Text>
+        <Button  mode="contained" color="#ed6b18" onPress={() => {this.props.navigation.navigate('SignIn')}}>
+            Sign In
+        </Button>
+        <Button  mode="contained" color="#ed6b18" onPress={() => {this.props.navigation.navigate('Finger')}}>
+            Fingerprint
+        </Button>
       </View>
     );
   }
 }
+
+export default withNavigation(HomeScreen);

@@ -3,6 +3,9 @@ import { View, Text, Image } from 'react-native';
 import { Button, TextInput, Subheading, Divider } from 'react-native-paper';
 import { StyleSheet } from 'react-native';
 import SignInForm from "../components/SignInForm";
+import SignInGoogle from '../components/SignInGoogle';
+import SignInApple from '../components/SignInApple';
+import SignInAnon from '../components/SignInAnon';
 
 class SignInScreen extends React.Component {
 
@@ -13,6 +16,10 @@ class SignInScreen extends React.Component {
     _signInWithGoogle = () => {
         console.log("google sign in");
     }
+    _signInWithApple = () => {
+        console.log("apple sign in");
+    }
+
 
     render() {
         return (
@@ -22,12 +29,15 @@ class SignInScreen extends React.Component {
                 </View>
                 <SignInForm />
 
-                <Divider style={styles.divider} inset={true} />
-
-                <View style={styles.google}>
-                    <Button mode="outlined" color="#ed6b18" onPress={this._signInWithGoogle}>
-                        Sign in with Google
-                    </Button>
+                <View style={styles.or}>
+                    <Text>
+                        or
+                    </Text>
+                </View>
+                <View style={styles.social}>
+                <SignInGoogle/>
+                <SignInApple/>
+                <SignInAnon/>
                 </View>
             </View>
         );
@@ -39,10 +49,7 @@ export default SignInScreen;
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: "#fff",
-        marginLeft: 30,
-        marginRight: 30,
-        marginBottom: 30
+        flex: 1
     },
     divider: {
         color: "black",
@@ -53,12 +60,24 @@ const styles = StyleSheet.create({
         marginTop: 15
     },
     google: {
-        marginTop: 5,
+
     },
     label: {
         color: "black"
     },
     signInGoogle: {
+    },
+
+    social: {
+        marginLeft: 30,
+        marginRight: 30,
+
+    },
+    or: {
+        alignItems: "center",
+        justifyContent: "center",
+        marginTop: 10,
+        marginBottom: 10
     },
     logo: {
         alignItems: "center",
@@ -66,5 +85,10 @@ const styles = StyleSheet.create({
     },
     logoImage: {
 
+    },
+    googleButton : {
+        width:28,
+        height:28,
+        padding:0
     }
 });

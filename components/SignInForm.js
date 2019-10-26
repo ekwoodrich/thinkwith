@@ -12,7 +12,7 @@ class SignInForm extends Component {
         email: '',
         password: ''
     };
-
+    
     componentDidUpdate(prevProps) {
         const { error, logged } = this.props;
 
@@ -21,30 +21,32 @@ class SignInForm extends Component {
         if (logged) {
             this.props.navigation.navigate('Profile');
         }
-    }
+    };
 
+    _signInEmail = () => {
+        this.props.navigation.navigate('Home');
+    };
+    
     render() {
 
         return (
 
-            <View>
+            <View style={styles.container}>
                 <TextInput
                     label="Email"
                     value={this.state.email}
                     onChangeText={email => this.setState({ email })}
-                    mode="outlined"
                     autoCapitalize="none"
                 />
                 <TextInput
                     label="Password"
                     value={this.state.password}
                     onChangeText={password => this.setState({ password })}
-                    mode="outlined"
                     secureTextEntry={true}
                 />
                 <View style={styles.login}>
 
-                    <Button mode="outlined" color="#ed6b18" onPress={() => { console.log('sign in') }}>
+                    <Button  mode="contained" color="#ed6b18" onPress={this._signInEmail}>
                         Sign in
                     </Button>
                 </View>
@@ -53,14 +55,13 @@ class SignInForm extends Component {
     }
 }
 
-export default SignInForm;
+export default withNavigation(SignInForm);
 
 const styles = StyleSheet.create({
     container: {
         backgroundColor: "#fff",
         marginLeft: 30,
-        marginRight: 30,
-        marginBottom: 30
+        marginRight: 30
     },
     divider: {
         color: "black",
@@ -68,15 +69,13 @@ const styles = StyleSheet.create({
         marginBottom: 15
     },
     login: {
-        marginTop: 15
+        marginTop: 15,
     },
     google: {
         marginTop: 5,
     },
     label: {
         color: "black"
-    },
-    signInGoogle: {
     },
     logo: {
         alignItems: "center",

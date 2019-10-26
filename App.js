@@ -18,6 +18,10 @@ import AuthLoadingScreen from './screens/AuthLoadingScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import HomeScreen from './screens/HomeScreen';
 import SignInScreen from './screens/SignInScreen';
+import FingerScreen from './screens/FingerScreen';
+
+import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
+
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\nCmd+D or shake for dev menu',
@@ -30,10 +34,10 @@ const firebaseCredentials = Platform.select({
 });
 
 const AppStack = createStackNavigator({ Home: HomeScreen, Profile: ProfileScreen });
-const AuthStack = createStackNavigator({ SignIn: SignInScreen });
+const AuthStack = createStackNavigator({ SignIn: SignInScreen, Finger: FingerScreen });
 
 
-export default createAppContainer(
+const App = createAppContainer(
   createSwitchNavigator(
     {
       AuthLoading: AuthLoadingScreen,
@@ -45,6 +49,24 @@ export default createAppContainer(
     }
   )
 );
+
+export default () => {
+  return (
+  <PaperProvider theme={theme}>
+  <App/>
+  </PaperProvider>
+  )
+}
+const theme = {
+  ...DefaultTheme,
+  roundness: 2,
+  dark : true,
+  colors: {
+    ...DefaultTheme.colors,
+    primary: '#3498db',
+    accent: '#f1c40f',
+  },
+};
 
 const styles = StyleSheet.create({
   container: {
