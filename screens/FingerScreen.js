@@ -10,7 +10,9 @@ import SignInApple from '../components/SignInApple';
 import SignInAnon from '../components/SignInAnon';
 
 class FingerScreen extends React.Component {
-
+    static navigationOptions = {
+        header: null
+    };
 
     _signInWithEmail = () => {
         console.log("email sign in");
@@ -36,7 +38,7 @@ class FingerScreen extends React.Component {
                     <Text >Touch the fingerprint sensor to enter</Text>        
                     </View>
                     <View style={styles.fingerLog}>
-        <Button   mode="outlined" compact={true} color="#ed6b18" onPress={() => {this.props.navigation.navigate('Finger')}}>
+        <Button   mode="outlined" compact={true} color="#ed6b18" onPress={() => {this.props.navigation.navigate('SignIn')}}>
             Log Out
         </Button>
         </View>

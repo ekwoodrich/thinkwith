@@ -10,6 +10,10 @@ import SignInAnon from '../components/SignInAnon';
 class SignInScreen extends React.Component {
 
 
+    static navigationOptions = {
+        header: null
+    };
+
     _signInWithEmail = () => {
         console.log("email sign in");
     }
