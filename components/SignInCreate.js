@@ -9,11 +9,13 @@ export default class SignInCreate extends Component {
     this.state = {
     };
   }
-
+  _createAccount = ()=> {
+    this.props.navigation.navigate('CreateAccount');
+  }
   render() {
     return (
     <View style={styles.apple}>
-    <Button contentStyle={styles.anonButton} mode="contained" icon="person" color="#ed6b18" onPress={() => {console.log('sign in anon')}}>
+    <Button contentStyle={styles.anonButton} mode="contained" icon="person" color="#ed6b18" onPress={this._createAccount}>
         Create Account
     </Button>
     </View>

@@ -33,15 +33,11 @@ class SignInScreen extends React.Component {
                     <Image style={styles.logoImage} source={require('../assets/img/thinkwith_icon.png')} />
                 </View>
                 <SignInForm />
-
-                <View style={styles.or}>
-                    <Text>
-                        or
-                    </Text>
-                </View>
-
+        <Button   mode="outlined" compact={true} color="#ed6b18" onPress={() => {this.props.navigation.navigate('SignIn')}}>
+            FORGOT PASSWORD?
+        </Button>
                 <View style={styles.social}>
-                <SignInCreate/>
+                <SignInCreate navigation={this.props.navigation}/>
                 </View>
                 <View style={styles.or}>
                     <Text>
