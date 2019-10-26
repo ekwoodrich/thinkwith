@@ -12,8 +12,8 @@ export default class SignInApple extends Component {
 
   render() {
     return (
-        <View style={styles.apple}>
-            <Button mode="contained" color="black" onPress={()=>{console.log("sign in with apple")}}>
+        <View style={styles.button}>
+            <Button mode="contained" color="#585858" onPress={()=>{console.log("sign in with apple")}}>
                 Sign in with Apple
             </Button>
         </View>
@@ -22,35 +22,8 @@ export default class SignInApple extends Component {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1
-    },
-    divider: {
-        color: "black",
-        marginTop: 15,
-        marginBottom: 15
-    },
-    login: {
-        marginTop: 15
-    },
-    google: {
-
-    },
-    label: {
-        color: "black"
-    },
-    signInGoogle: {
-    },
-    logo: {
-        alignItems: "center",
-        justifyContent: "center"
-    },
-    logoImage: {
-
-    },
-    googleButton : {
-        width:28,
-        height:28,
-        padding:0
+   
+    button : {
+        marginBottom: 10
     }
 });

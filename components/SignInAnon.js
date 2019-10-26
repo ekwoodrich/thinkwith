@@ -13,7 +13,7 @@ export default class SignInAnon extends Component {
   render() {
     return (
     <View style={styles.apple}>
-    <Button mode="contained" icon="lock" color="black" onPress={() => {console.log('sign in anon')}}>
+    <Button mode="contained" icon="lock" color="#585858" onPress={() => {console.log('sign in anon')}}>
         Sign in Anonymously
     </Button>
     </View>

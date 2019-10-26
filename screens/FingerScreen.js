@@ -35,7 +35,7 @@ class FingerScreen extends React.Component {
                     <Icon name="fingerprint" size={120} color="#808080" />    
                     </View>
                 <View style={styles.logo}>       
-                    <Text >Touch the fingerprint sensor to enter</Text>        
+                    <Text >Touch fingerprint sensor to enter</Text>        
                     </View>
                     <View style={styles.fingerLog}>
         <Button   mode="outlined" compact={true} color="#ed6b18" onPress={() => {this.props.navigation.navigate('SignIn')}}>
