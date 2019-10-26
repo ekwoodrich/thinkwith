@@ -13,7 +13,7 @@ export default class SignInAnon extends Component {
   render() {
     return (
     <View style={styles.apple}>
-    <Button mode="contained" icon="lock" color="#585858" onPress={() => {console.log('sign in anon')}}>
+    <Button contentStyle={styles.anonButton} mode="contained" icon="lock" color="#585858" onPress={() => {console.log('sign in anon')}}>
         Sign in Anonymously
     </Button>
     </View>
@@ -22,35 +22,9 @@ export default class SignInAnon extends Component {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1
-    },
-    divider: {
-        color: "black",
-        marginTop: 15,
-        marginBottom: 15
-    },
-    login: {
-        marginTop: 15
-    },
-    google: {
 
-    },
-    label: {
-        color: "black"
-    },
-    signInGoogle: {
-    },
-    logo: {
-        alignItems: "center",
-        justifyContent: "center"
-    },
-    logoImage: {
-
-    },
-    googleButton : {
-        width:28,
-        height:28,
-        padding:0
+    anonButton: {
+        height:48
+    
     }
 });

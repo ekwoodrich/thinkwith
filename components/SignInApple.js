@@ -9,11 +9,11 @@ export default class SignInApple extends Component {
     this.state = {
     };
   }
-
+ 
   render() {
     return (
         <View style={styles.button}>
-            <Button mode="contained" color="#585858" onPress={()=>{console.log("sign in with apple")}}>
+            <Button contentStyle={styles.appleButton} mode="contained" color="#111" icon={require('../assets/img/apple-64.png')} onPress={()=>{console.log("sign in with apple")}}>
                 Sign in with Apple
             </Button>
         </View>
@@ -24,6 +24,10 @@ export default class SignInApple extends Component {
 const styles = StyleSheet.create({
    
     button : {
-        marginBottom: 10
+        marginBottom: 8
+    },
+    appleButton: {
+        height:48
+    
     }
 });

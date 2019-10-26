@@ -46,7 +46,7 @@ class SignInForm extends Component {
                 />
                 <View style={styles.login}>
 
-                    <Button  mode="contained" color="#ed6b18" onPress={this._signInEmail}>
+                    <Button  contentStyle={styles.emailButton} mode="contained" color="#ed6b18" onPress={this._signInEmail}>
                         Sign in
                     </Button>
                 </View>
@@ -83,5 +83,9 @@ const styles = StyleSheet.create({
     },
     logoImage: {
 
+    },
+    emailButton: {
+        height:48
+    
     }
 });

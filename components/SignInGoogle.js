@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Image } from 'react-native';
 import { StyleSheet } from 'react-native';
 import { Button, TextInput, Subheading, Divider } from 'react-native-paper';
 
@@ -13,7 +13,12 @@ export default class SignInGoogle extends Component {
   render() {
     return (
     <View style={styles.button}>
-    <Button mode="contained" color="#585858" onPress={() => {console.log('sign in with google')}}>
+    <Button contentStyle={styles.googleButton} mode="contained" color="white"  icon={({ size, color }) => (
+        <Image
+        source={require('../assets/img/g-logo.png')}
+        style={{ width: 18, height: 18}}
+        />
+    )} onPress={() => {console.log('sign in with google')}}>
         Sign in with Google
     </Button>
     </View>
@@ -24,6 +29,10 @@ export default class SignInGoogle extends Component {
 const styles = StyleSheet.create({
    
     button : {
-        marginBottom: 10
+        marginBottom: 8
+    },
+    googleButton: {
+        height:48
+    
     }
 });
