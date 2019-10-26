@@ -33,7 +33,7 @@ class SignInScreen extends React.Component {
                     <Image style={styles.logoImage} source={require('../assets/img/thinkwith_icon.png')} />
                 </View>
                 <SignInForm />
-        <Button   mode="outlined" compact={true} color="#ed6b18" onPress={() => {this.props.navigation.navigate('SignIn')}}>
+        <Button style={styles.forgot} mode="outlined" compact={true} color="#ed6b18" onPress={() => {this.props.navigation.navigate('SignIn')}}>
             FORGOT PASSWORD?
         </Button>
                 <View style={styles.social}>
@@ -61,6 +61,10 @@ export default SignInScreen;
 const styles = StyleSheet.create({
     container: {
         flex: 1
+    },
+    forgot : {
+        marginTop:10,
+        marginBottom:10
     },
     divider: {
         color: "black",
