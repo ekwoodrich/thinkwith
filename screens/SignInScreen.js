@@ -6,6 +6,7 @@ import SignInForm from "../components/SignInForm";
 import SignInGoogle from '../components/SignInGoogle';
 import SignInApple from '../components/SignInApple';
 import SignInAnon from '../components/SignInAnon';
+import SignInCreate from '../components/SignInCreate';
 
 class SignInScreen extends React.Component {
 
@@ -38,10 +39,20 @@ class SignInScreen extends React.Component {
                         or
                     </Text>
                 </View>
+
+                <View style={styles.social}>
+                <SignInCreate/>
+                </View>
+                <View style={styles.or}>
+                    <Text>
+                        or
+                    </Text>
+                </View>
                 <View style={styles.social}>
                 <SignInGoogle/>
                 <SignInApple/>
                 <SignInAnon/>
+
                 </View>
             </View>
         );
@@ -53,8 +64,7 @@ export default SignInScreen;
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor : "#efefef"
+        flex: 1
     },
     divider: {
         color: "black",
