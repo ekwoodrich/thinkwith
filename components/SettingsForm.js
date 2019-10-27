@@ -16,6 +16,7 @@ export default class SettingsForm extends Component {
         <Subheading>Fingerprint </Subheading>
         <Switch
           value={this.state.optionFingerprint}
+          color="#ed6b18"
           onValueChange={() => {
             this.setState({ optionFingerprint: !this.state.optionFingerprint });
           }}
