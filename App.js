@@ -40,12 +40,14 @@ const App = createAppContainer(
 
 export default () => {
   return (
-    <PaperProvider theme={theme}>
-      <StatusBar barStyle="light-content" />
-      <App />
-    </PaperProvider>
-  );
-};
+  <PaperProvider theme={theme}>
+      <StatusBar  />
+  <App/>
+    
+  </PaperProvider>
+
+  )
+}
 const theme = {
   ...DefaultTheme,
   roundness: 2,
