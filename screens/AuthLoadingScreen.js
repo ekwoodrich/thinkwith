@@ -4,8 +4,7 @@ import { View, Text } from 'react-native';
 export default class AuthLoadingScreen extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-    };
+    this.state = {};
   }
 
   render() {

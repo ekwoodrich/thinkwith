@@ -1,12 +1,12 @@
-import React from "react";
-import { View, Text, Image, ScrollView } from "react-native";
-import { Button, TextInput, Subheading, Divider } from "react-native-paper";
-import { StyleSheet } from "react-native";
-import SignInForm from "../components/SignInForm";
-import SignInGoogle from "../components/SignInGoogle";
-import SignInApple from "../components/SignInApple";
-import SignInAnon from "../components/SignInAnon";
-import SignInCreate from "../components/SignInCreate";
+import React from 'react';
+import { View, Text, Image, ScrollView } from 'react-native';
+import { Button } from 'react-native-paper';
+import { StyleSheet } from 'react-native';
+import SignInForm from '../components/SignInForm';
+import SignInGoogle from '../components/SignInGoogle';
+import SignInApple from '../components/SignInApple';
+import SignInAnon from '../components/SignInAnon';
+import SignInCreate from '../components/SignInCreate';
 
 class SignInScreen extends React.Component {
   static navigationOptions = {
@@ -14,13 +14,13 @@ class SignInScreen extends React.Component {
   };
 
   _signInWithEmail = () => {
-    console.log("email sign in");
+    console.log('email sign in');
   };
   _signInWithGoogle = () => {
-    console.log("google sign in");
+    console.log('google sign in');
   };
   _signInWithApple = () => {
-    console.log("apple sign in");
+    console.log('apple sign in');
   };
 
   render() {
@@ -29,7 +29,7 @@ class SignInScreen extends React.Component {
         <View style={styles.logo}>
           <Image
             style={styles.logoImage}
-            source={require("../assets/img/thinkwith_icon.png")}
+            source={require('../assets/img/thinkwith_icon.png')}
           />
         </View>
         <SignInForm />
@@ -39,7 +39,7 @@ class SignInScreen extends React.Component {
           compact={true}
           color="#ed6b18"
           onPress={() => {
-            this.props.navigation.navigate("ForgotPassword");
+            this.props.navigation.navigate('ForgotPassword');
           }}
         >
           FORGOT PASSWORD?
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     marginBottom: 10
   },
   divider: {
-    color: "black",
+    color: 'black',
     marginTop: 15,
     marginBottom: 15
   },
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
   },
   google: {},
   label: {
-    color: "black"
+    color: 'black'
   },
   signInGoogle: {},
 
@@ -89,19 +89,19 @@ const styles = StyleSheet.create({
     marginRight: 30
   },
   or: {
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
     marginTop: 10,
     marginBottom: 10
   },
   logo: {
-    alignItems: "center",
-    justifyContent: "center"
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   logoImage: {
     width: 150,
     height: 150,
-    resizeMode: "stretch"
+    resizeMode: 'stretch'
   },
   googleButton: {
     width: 28,

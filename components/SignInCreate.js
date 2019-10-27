@@ -6,27 +6,30 @@ import { Button, TextInput, Subheading, Divider } from 'react-native-paper';
 export default class SignInCreate extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-    };
+    this.state = {};
   }
-  _createAccount = ()=> {
+  _createAccount = () => {
     this.props.navigation.navigate('CreateAccount');
-  }
+  };
   render() {
     return (
-    <View style={styles.apple}>
-    <Button contentStyle={styles.anonButton} mode="contained" icon="person" color="#ed6b18" onPress={this._createAccount}>
-        Create Account
-    </Button>
-    </View>
+      <View style={styles.apple}>
+        <Button
+          contentStyle={styles.anonButton}
+          mode="contained"
+          icon="person"
+          color="#ed6b18"
+          onPress={this._createAccount}
+        >
+          Create Account
+        </Button>
+      </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-
-    anonButton: {
-        height:48
-    
-    }
+  anonButton: {
+    height: 48
+  }
 });
