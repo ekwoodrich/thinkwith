@@ -3,6 +3,9 @@ import { View, Text } from 'react-native';
 import { withNavigation } from 'react-navigation';
 import { Button } from 'react-native-paper';
 class HomeScreen extends Component {
+  static navigationOptions = {
+    header: null
+  };
   constructor(props) {
     super(props);
     this.state = {};
