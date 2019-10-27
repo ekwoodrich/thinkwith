@@ -6,8 +6,8 @@
  * @flow
  */
 
-import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import React, { Component} from 'react';
+import { Platform, StyleSheet, Text, View, SafeAreaView, StatusBar } from 'react-native';
 
 import firebase from '@react-native-firebase/app';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
@@ -55,8 +55,11 @@ const App = createAppContainer(
 export default () => {
   return (
   <PaperProvider theme={theme}>
+      <StatusBar />
   <App/>
+    
   </PaperProvider>
+
   )
 }
 const theme = {
