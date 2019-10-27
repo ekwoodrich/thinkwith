@@ -2,27 +2,18 @@ import React from 'react';
 import { View, Text, Image } from 'react-native';
 import { Button, TextInput, Subheading, Divider } from 'react-native-paper';
 import { StyleSheet } from 'react-native';
-import SignInForm from "../components/SignInForm";
+import SignInCreateForm from "../components/SignInCreateForm";
 import SignInGoogle from '../components/SignInGoogle';
 import SignInApple from '../components/SignInApple';
 import SignInAnon from '../components/SignInAnon';
 import SignInCreate from '../components/SignInCreate';
+import SignInForgot from '../components/SignInForgot';
 
-class SignInScreen extends React.Component {
+class ForgotPasswordScreen extends React.Component {
 
 
-    static navigationOptions = {
-        header: null
-    };
-
-    _signInWithEmail = () => {
-        console.log("email sign in");
-    }
-    _signInWithGoogle = () => {
-        console.log("google sign in");
-    }
-    _signInWithApple = () => {
-        console.log("apple sign in");
+    state = {
+        email : ''
     }
 
 
@@ -32,39 +23,48 @@ class SignInScreen extends React.Component {
                 <View style={styles.logo}>
                     <Image style={styles.logoImage} source={require('../assets/img/thinkwith_icon.png')} />
                 </View>
-                <SignInForm />
-        <Button style={styles.forgot} mode="outlined" compact={true} color="#ed6b18" onPress={() => {this.props.navigation.navigate('ForgotPassword')}}>
-            FORGOT PASSWORD?
-        </Button>
-                <View style={styles.social}>
-                <SignInCreate navigation={this.props.navigation}/>
-                </View>
-                <View style={styles.or}>
-                    <Text>
-                        or
-                    </Text>
-                </View>
-                <View style={styles.social}>
-                <SignInGoogle/>
-                <SignInApple/>
-                <SignInAnon/>
-
+            <View >
+                <Text style={styles.forgotPrompt}>
+                    Forgot your password? 
+                </Text>
+                <Text style={styles.forgotBlurb}>
+                    We've all been there. 
+                </Text>
+                <Text style={styles.forgotBlurb}>
+                    Just enter your email address and we'll help you get a new one right away.
+                </Text>
+                <TextInput
+                    label="Email"
+                    value={this.state.email}
+                    onChangeText={email => this.setState({ email })}
+                    autoCapitalize="none"
+                />
+                <SignInForgot/>
                 </View>
             </View>
         );
     }
 }
 
-export default SignInScreen;
+export default ForgotPasswordScreen;
 
 
 const styles = StyleSheet.create({
     container: {
+        marginLeft: 30,
+        marginRight: 30,
         flex: 1
     },
-    forgot : {
-        marginTop:10,
+    forgotBlurb: {
+        fontSize: 16,
+        textAlign : 'center',
         marginBottom:10
+    },  
+    forgotPrompt : {
+        textAlign: 'center',
+        fontWeight : 'bold',
+        fontSize: 24,
+        marginBottom: 10
     },
     divider: {
         color: "black",

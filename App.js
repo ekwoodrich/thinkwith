@@ -22,6 +22,7 @@ import FingerScreen from './screens/FingerScreen';
 
 import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 import CreateAccountScreen from './screens/CreateAccountScreen';
+import ForgotPasswordScreen from './screens/ForgotPasswordScreen';
 
 
 const instructions = Platform.select({
@@ -35,7 +36,7 @@ const firebaseCredentials = Platform.select({
 });
 
 const AppStack = createStackNavigator({ Home: HomeScreen, Profile: ProfileScreen });
-const AuthStack = createStackNavigator({ SignIn: SignInScreen, Finger: FingerScreen, CreateAccount: CreateAccountScreen });
+const AuthStack = createStackNavigator({ SignIn: SignInScreen, Finger: FingerScreen, CreateAccount: CreateAccountScreen, ForgotPassword: ForgotPasswordScreen });
 
 
 const App = createAppContainer(
