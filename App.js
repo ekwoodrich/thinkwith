@@ -55,7 +55,7 @@ const App = createAppContainer(
 export default () => {
   return (
   <PaperProvider theme={theme}>
-      <StatusBar />
+      <StatusBar barStyle="light-content" />
   <App/>
     
   </PaperProvider>
