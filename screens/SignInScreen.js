@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, ScrollView } from 'react-native';
 import { Button, TextInput, Subheading, Divider } from 'react-native-paper';
 import { StyleSheet } from 'react-native';
 import SignInForm from "../components/SignInForm";
@@ -28,7 +28,7 @@ class SignInScreen extends React.Component {
 
     render() {
         return (
-            <View style={styles.container}>
+            <ScrollView style={styles.container}>
                 <View style={styles.logo}>
                     <Image style={styles.logoImage} source={require('../assets/img/thinkwith_icon.png')} />
                 </View>
@@ -50,7 +50,7 @@ class SignInScreen extends React.Component {
                 <SignInAnon/>
 
                 </View>
-            </View>
+            </ScrollView>
         );
     }
 }
@@ -96,10 +96,13 @@ const styles = StyleSheet.create({
     },
     logo: {
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "center",
+        
     },
     logoImage: {
-
+        width:150,
+        height:150,
+        resizeMode : 'stretch'
     },
     googleButton : {
         width:28,
