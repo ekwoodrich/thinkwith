@@ -47,7 +47,6 @@ class SignInCreateForm extends Component {
         </Text>
         <View style={styles.login}>
           <Button
-            icon="check"
             contentStyle={styles.emailButton}
             mode="contained"
             color="#ed6b18"

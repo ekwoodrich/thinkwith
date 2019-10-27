@@ -17,7 +17,6 @@ export default class SignInCreate extends Component {
         <Button
           contentStyle={styles.anonButton}
           mode="contained"
-          icon="person"
           color="#ed6b18"
           onPress={this._createAccount}
         >

@@ -43,7 +43,6 @@ class SignInForm extends Component {
         />
         <View style={styles.login}>
           <Button
-            icon="arrow-forward"
             contentStyle={styles.emailButton}
             mode="contained"
             color="#ed6b18"
