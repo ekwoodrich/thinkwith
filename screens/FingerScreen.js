@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, Image } from 'react-native';
 import { Button } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import auth from '@react-native-firebase/auth';
 
 import { StyleSheet } from 'react-native';
 
@@ -9,17 +10,22 @@ class FingerScreen extends React.Component {
   static navigationOptions = {
     header: null
   };
-
-  _signInWithEmail = () => {
-    console.log('email sign in');
-  };
-  _signInWithGoogle = () => {
-    console.log('google sign in');
-  };
-  _signInWithApple = () => {
-    console.log('apple sign in');
+  _logoutUser = () => {
+    const nav = this.props.navigation;
+    auth()
+      .signOut()
+      .then(function() {
+        nav.navigate('SignIn');
+      });
   };
 
+  componentDidMount() {
+    auth().onAuthStateChanged(user => {
+      if (!user) {
+        this.props.navigation.navigate('SignIn');
+      }
+    });
+  }
   render() {
     return (
       <View style={styles.container}>
@@ -50,9 +56,7 @@ class FingerScreen extends React.Component {
             mode="outlined"
             compact={true}
             color="#ed6b18"
-            onPress={() => {
-              this.props.navigation.navigate('SignIn');
-            }}
+            onPress={this._logoutUser}
           >
             Log Out
           </Button>
