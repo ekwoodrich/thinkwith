@@ -33,21 +33,19 @@ const App = createAppContainer(
       Auth: AuthStack
     },
     {
-      initialRouteName: 'Auth'
+      initialRouteName: 'AuthLoading'
     }
   )
 );
 
 export default () => {
   return (
-  <PaperProvider theme={theme}>
-      <StatusBar  />
-  <App/>
-    
-  </PaperProvider>
-
-  )
-}
+    <PaperProvider theme={theme}>
+      <StatusBar />
+      <App />
+    </PaperProvider>
+  );
+};
 const theme = {
   ...DefaultTheme,
   roundness: 2,
