@@ -5,25 +5,33 @@ import { View, Text, Image, Alert } from 'react-native';
 import { Button, TextInput, Subheading, Divider } from 'react-native-paper';
 import { StyleSheet } from 'react-native';
 import { withNavigation } from 'react-navigation';
+import auth from '@react-native-firebase/auth';
 
 class SignInForm extends Component {
-  state = {
-    email: '',
-    password: ''
-  };
+  constructor(props) {
+    super(props);
 
-  componentDidUpdate(prevProps) {
-    const { error, logged } = this.props;
-
-    if (!prevProps.error && error) Alert.alert('error', error);
-
-    if (logged) {
-      this.props.navigation.navigate('Profile');
-    }
+    this.state = {
+      email: '',
+      password: ''
+    };
   }
 
+  componentDidUpdate() {
+    if (auth().currentUser) {
+      this.props.navigation.navigate('Home');
+    }
+  }
   _signInEmail = () => {
-    this.props.navigation.navigate('Home');
+    try {
+      auth()
+        .signInWithEmailAndPassword(this.state.email, this.state.password)
+        .then(res => {
+          console.log(res.user.email);
+        });
+    } catch (error) {
+      Alert.alert('error', error.toString(error));
+    }
   };
 
   render() {
