@@ -16,9 +16,7 @@ export default class SignInForgot extends Component {
           contentStyle={styles.passwordButton}
           mode="contained"
           color="#ed6b18"
-          onPress={() => {
-            console.log('get new password');
-          }}
+          onPress={this.props.forgotPassword}
         >
           Get New Password
         </Button>

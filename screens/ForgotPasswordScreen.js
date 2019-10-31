@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, Alert } from 'react-native';
 import { Button, TextInput, Subheading, Divider } from 'react-native-paper';
 import { StyleSheet } from 'react-native';
 import SignInCreateForm from '../components/SignInCreateForm';
@@ -8,12 +8,25 @@ import SignInApple from '../components/SignInApple';
 import SignInAnon from '../components/SignInAnon';
 import SignInCreate from '../components/SignInCreate';
 import SignInForgot from '../components/SignInForgot';
+import { firebase } from '@react-native-firebase/auth';
 
 class ForgotPasswordScreen extends React.Component {
-  state = {
-    email: ''
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: '',
+      passwordSent: false
+    };
+  }
 
+  forgotPassword = () => {
+    firebase
+      .auth()
+      .sendPasswordResetEmail(this.state.email)
+      .then(() => {
+        this.setState({ passwordSent: true });
+      });
+  };
   render() {
     return (
       <View style={styles.container}>
@@ -23,21 +36,42 @@ class ForgotPasswordScreen extends React.Component {
             source={require('../assets/img/thinkwith_icon.png')}
           />
         </View>
-        <View>
-          <Text style={styles.forgotPrompt}>Forgot your password?</Text>
-          <Text style={styles.forgotBlurb}>We've all been there.</Text>
-          <Text style={styles.forgotBlurb}>
-            Just enter your email address and we'll help you get a new one right
-            away.
-          </Text>
-          <TextInput
-            label="Email"
-            value={this.state.email}
-            onChangeText={email => this.setState({ email })}
-            autoCapitalize="none"
-          />
-          <SignInForgot />
-        </View>
+        {this.state.passwordSent && (
+          <View>
+            <Text style={styles.forgotPrompt}>Email sent!</Text>
+            <Text style={styles.forgotBlurb}>
+              We've sent you an email at {this.state.email} with instructions to
+              reset your password.
+            </Text>
+            <Button
+              contentStyle={styles.passwordButton}
+              mode="outlined"
+              color="#ed6b18"
+              onPress={() => {
+                this.props.navigation.navigate('SignIn');
+              }}
+            >
+              Sign In
+            </Button>
+          </View>
+        )}
+        {!this.state.passwordSent && (
+          <View>
+            <Text style={styles.forgotPrompt}>Forgot your password?</Text>
+            <Text style={styles.forgotBlurb}>We've all been there.</Text>
+            <Text style={styles.forgotBlurb}>
+              Just enter your email address and we'll help you get a new one
+              right away.
+            </Text>
+            <TextInput
+              label="Email"
+              value={this.state.email}
+              onChangeText={email => this.setState({ email })}
+              autoCapitalize="none"
+            />
+            <SignInForgot forgotPassword={this.forgotPassword} />
+          </View>
+        )}
       </View>
     );
   }
