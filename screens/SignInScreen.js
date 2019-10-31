@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, ScrollView } from 'react-native';
+import { View, Text, Image, ScrollView, Alert } from 'react-native';
 import { Button } from 'react-native-paper';
 import { StyleSheet } from 'react-native';
 import SignInForm from '../components/SignInForm';
@@ -7,8 +7,15 @@ import SignInGoogle from '../components/SignInGoogle';
 import SignInApple from '../components/SignInApple';
 import SignInAnon from '../components/SignInAnon';
 import SignInCreate from '../components/SignInCreate';
+import { GoogleSignin } from '@react-native-community/google-signin';
+import { firebase } from '@react-native-firebase/auth';
 
 class SignInScreen extends React.Component {
+  componentDidMount = () => {
+    this._bootstrapGoogle().then(() => {
+      console.log('google signin loaded');
+    });
+  };
   static navigationOptions = {
     header: null
   };
@@ -16,11 +23,15 @@ class SignInScreen extends React.Component {
   _signInWithEmail = () => {
     console.log('email sign in');
   };
-  _signInWithGoogle = () => {
-    console.log('google sign in');
-  };
   _signInWithApple = () => {
     console.log('apple sign in');
+  };
+
+  _bootstrapGoogle = async () => {
+    await GoogleSignin.configure({
+      webClientId:
+        '892887036275-9ki5fr98el2iebn38asa8f0ourjs25je.apps.googleusercontent.com'
+    });
   };
 
   render() {
