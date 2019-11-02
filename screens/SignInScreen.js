@@ -30,7 +30,8 @@ class SignInScreen extends React.Component {
   _bootstrapGoogle = async () => {
     await GoogleSignin.configure({
       webClientId:
-        '892887036275-9ki5fr98el2iebn38asa8f0ourjs25je.apps.googleusercontent.com'
+        '892887036275-9ki5fr98el2iebn38asa8f0ourjs25je.apps.googleusercontent.com',
+      forceConsentPrompt: true
     });
   };
 

@@ -3,6 +3,10 @@ import { View, Text, Image } from 'react-native';
 import { Button } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import auth from '@react-native-firebase/auth';
+import {
+  GoogleSignin,
+  statusCodes
+} from '@react-native-community/google-signin';
 
 import { StyleSheet } from 'react-native';
 
@@ -15,7 +19,9 @@ class FingerScreen extends React.Component {
     auth()
       .signOut()
       .then(function() {
-        nav.navigate('SignIn');
+        GoogleSignin.revokeAccess().then(function() {
+          nav.navigate('SignIn');
+        });
       });
   };
 
