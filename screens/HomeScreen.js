@@ -18,15 +18,6 @@ class HomeScreen extends Component {
           mode="contained"
           color="#ed6b18"
           onPress={() => {
-            this.props.navigation.navigate('SignIn');
-          }}
-        >
-          Sign In
-        </Button>
-        <Button
-          mode="contained"
-          color="#ed6b18"
-          onPress={() => {
             this.props.navigation.navigate('Finger');
           }}
         >
@@ -40,6 +31,15 @@ class HomeScreen extends Component {
           }}
         >
           Profile
+        </Button>
+        <Button
+          mode="contained"
+          color="#ed6b18"
+          onPress={() => {
+            this.props.navigation.navigate('NewPost');
+          }}
+        >
+          New Post
         </Button>
       </View>
     );

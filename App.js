@@ -13,10 +13,12 @@ import FingerScreen from './screens/FingerScreen';
 import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 import CreateAccountScreen from './screens/CreateAccountScreen';
 import ForgotPasswordScreen from './screens/ForgotPasswordScreen';
+import NewPostScreen from './screens/NewPostScreen';
 
 const AppStack = createStackNavigator({
   Home: HomeScreen,
-  Profile: ProfileScreen
+  Profile: ProfileScreen,
+  NewPost: NewPostScreen
 });
 const AuthStack = createStackNavigator({
   SignIn: SignInScreen,
