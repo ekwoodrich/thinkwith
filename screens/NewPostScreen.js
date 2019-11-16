@@ -2,32 +2,32 @@ import * as React from 'react';
 import { BottomNavigation, Text } from 'react-native-paper';
 import { View, StyleSheet } from 'react-native';
 
-const MusicRoute = () => (
+const TextRoute = () => (
   <View>
     <Text>sdfsdf</Text>
   </View>
 );
 
-const AlbumsRoute = () => <Text>Albums</Text>;
+const PhotoRoute = () => <Text>Photo</Text>;
 
-const RecentsRoute = () => <Text>Recents</Text>;
+const LogRoute = () => <Text>Log</Text>;
 
 export default class NewPostScreen extends React.Component {
   state = {
-    index: 0,
+    index: 1,
     routes: [
-      { key: 'text', title: 'Text', icon: 'short-text' },
       { key: 'photo', title: 'Photo', icon: 'camera' },
-      { key: 'log', title: 'Recents', icon: 'history' }
+      { key: 'text', title: 'Text', icon: 'short-text' },
+      { key: 'log', title: 'Log', icon: 'history' }
     ]
   };
 
   _handleIndexChange = index => this.setState({ index });
 
   _renderScene = BottomNavigation.SceneMap({
-    text: MusicRoute,
-    photo: AlbumsRoute,
-    log: RecentsRoute
+    text: TextRoute,
+    photo: PhotoRoute,
+    log: LogRoute
   });
 
   render() {
