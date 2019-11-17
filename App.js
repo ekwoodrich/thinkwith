@@ -41,6 +41,8 @@ const App = createAppContainer(
 );
 
 export default () => {
+  console.disableYellowBox = true;
+
   return (
     <PaperProvider theme={theme}>
       <StatusBar />

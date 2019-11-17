@@ -17,7 +17,7 @@ export default class NewPostScreen extends React.Component {
     index: 1,
     routes: [
       { key: 'photo', title: 'Photo', icon: 'camera' },
-      { key: 'text', title: 'Text', icon: 'short-text' },
+      { key: 'text', title: 'Text', icon: 'text-short' },
       { key: 'log', title: 'Log', icon: 'history' }
     ]
   };
