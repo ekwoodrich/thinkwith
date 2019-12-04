@@ -1,6 +1,6 @@
 import React from 'react';
-import { Appbar, TextInput } from 'react-native-paper';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { Appbar } from 'react-native-paper';
+import { View, Text, StyleSheet, Image, TextInput } from 'react-native';
 import { withNavigation } from 'react-navigation';
 import { Searchbar } from 'react-native-paper';
 
@@ -23,8 +23,9 @@ const MainNavbar = ({ navigation, current }) => {
       <Appbar.Action icon="menu" onPress={() => navigation.openDrawer()} />
       <TextInput
         underlineColor="transparent"
+        underlineColorAndroid="transparent"
         selectionColor="transparent"
-        mode="flat"
+        flat
         style={styles.search}
         placeholder="Search notes"
       />
