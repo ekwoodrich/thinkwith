@@ -4,6 +4,7 @@ import { withNavigation } from 'react-navigation';
 import { Button } from 'react-native-paper';
 import { Appbar } from 'react-native-paper';
 import ProfileScreen from './ProfileScreen';
+import MainNavbar from '../components/MainNavbar';
 
 class HomeScreen extends Component {
   static navigationOptions = {
@@ -19,24 +20,7 @@ class HomeScreen extends Component {
   render() {
     return (
       <View>
-        <Appbar style={styles.bottom}>
-          <Appbar.Action
-            icon="archive"
-            onPress={() => this.props.navigation.openDrawer()}
-          />
-          <Appbar.Action
-            icon="mail"
-            onPress={() => console.log('Pressed mail')}
-          />
-          <Appbar.Action
-            icon="label"
-            onPress={() => console.log('Pressed label')}
-          />
-          <Appbar.Action
-            icon="delete"
-            onPress={() => console.log('Pressed delete')}
-          />
-        </Appbar>
+        <MainNavbar />
 
         <Button
           mode="contained"

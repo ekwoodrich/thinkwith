@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Avatar, Divider } from 'react-native-paper';
 import SettingsForm from '../components/SettingsForm';
+import MainNavbar from '../components/MainNavbar';
 
 export default class ProfileScreen extends Component {
   constructor(props) {
@@ -11,11 +12,14 @@ export default class ProfileScreen extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <Avatar.Icon style={styles.avatar} size={180} icon="person" />
-        <Text style={styles.email}>walterbship@gmail.com</Text>
-        <Divider />
-        <SettingsForm />
+      <View>
+        <MainNavbar current="profile" />
+        <View style={styles.container}>
+          <Avatar.Icon style={styles.avatar} size={180} icon="account" />
+          <Text style={styles.email}>walterbship@gmail.com</Text>
+          <Divider />
+          <SettingsForm />
+        </View>
       </View>
     );
   }
