@@ -21,20 +21,12 @@ class HomeScreen extends Component {
     return (
       <SafeAreaView style={styles.homeContainer}>
         <MainNavbar />
-
-        <Button
-          mode="contained"
-          color="#ed6b18"
-          onPress={() => {
-            this.props.navigation.navigate('NewPost');
-          }}
-        >
-          New Post
-        </Button>
         <FAB
           style={styles.fab}
           icon="plus"
-          onPress={() => console.log('Pressed')}
+          onPress={() => {
+            this.props.navigation.navigate('NewPost');
+          }}
         />
       </SafeAreaView>
     );
