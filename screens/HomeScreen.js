@@ -33,7 +33,6 @@ class HomeScreen extends Component {
         </Button>
         <FAB
           style={styles.fab}
-          small
           icon="plus"
           onPress={() => console.log('Pressed')}
         />
