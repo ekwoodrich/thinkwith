@@ -14,21 +14,15 @@ const styles = StyleSheet.create({
   },
   search: {
     width: '60%',
-    backgroundColor: 'transparent'
+    backgroundColor: 'transparent',
+    fontSize: 22
   }
 });
 const MainNavbar = ({ navigation, current }) => {
   return (
     <Appbar style={styles.appbar}>
       <Appbar.Action icon="menu" onPress={() => navigation.openDrawer()} />
-      <TextInput
-        underlineColor="transparent"
-        underlineColorAndroid="transparent"
-        selectionColor="transparent"
-        flat
-        style={styles.search}
-        placeholder="Search notes"
-      />
+      <TextInput style={styles.search} placeholder="Search notes" />
 
       {!current && (
         <Appbar.Action
