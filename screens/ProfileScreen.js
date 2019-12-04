@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
 import { Avatar, Divider, Button } from 'react-native-paper';
 import SettingsForm from '../components/SettingsForm';
 import MainNavbar from '../components/MainNavbar';
@@ -27,7 +27,7 @@ export default class ProfileScreen extends Component {
   };
   render() {
     return (
-      <View>
+      <SafeAreaView>
         <MainNavbar current="profile" />
 
         <View style={styles.container}>
@@ -45,7 +45,7 @@ export default class ProfileScreen extends Component {
           </Button>
           <SettingsForm />
         </View>
-      </View>
+      </SafeAreaView>
     );
   }
 }
