@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
-import { withNavigation } from 'react-navigation';
+import { withNavigation, SafeAreaView } from 'react-navigation';
 import { Button, FAB } from 'react-native-paper';
 import { Appbar } from 'react-native-paper';
 import ProfileScreen from './ProfileScreen';
@@ -19,7 +19,7 @@ class HomeScreen extends Component {
 
   render() {
     return (
-      <View style={styles.homeContainer}>
+      <SafeAreaView style={styles.homeContainer}>
         <MainNavbar />
 
         <Button
@@ -36,7 +36,7 @@ class HomeScreen extends Component {
           icon="plus"
           onPress={() => console.log('Pressed')}
         />
-      </View>
+      </SafeAreaView>
     );
   }
 }
