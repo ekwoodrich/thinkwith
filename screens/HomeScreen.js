@@ -26,24 +26,6 @@ class HomeScreen extends Component {
           mode="contained"
           color="#ed6b18"
           onPress={() => {
-            this.props.navigation.navigate('Finger');
-          }}
-        >
-          Fingerprint
-        </Button>
-        <Button
-          mode="contained"
-          color="#ed6b18"
-          onPress={() => {
-            this.props.navigation.navigate('Profile');
-          }}
-        >
-          Profile
-        </Button>
-        <Button
-          mode="contained"
-          color="#ed6b18"
-          onPress={() => {
             this.props.navigation.navigate('NewPost');
           }}
         >

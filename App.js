@@ -16,11 +16,15 @@ import CreateAccountScreen from './screens/CreateAccountScreen';
 import ForgotPasswordScreen from './screens/ForgotPasswordScreen';
 import NewPostScreen from './screens/NewPostScreen';
 
-const AppStack = createDrawerNavigator({
+const NoteStack = createStackNavigator({
   Home: HomeScreen,
-  Profile: ProfileScreen,
   NewPost: NewPostScreen
 });
+const AppDrawer = createDrawerNavigator({
+  Home: NoteStack,
+  Profile: ProfileScreen
+});
+
 const AuthStack = createStackNavigator({
   SignIn: SignInScreen,
   Finger: FingerScreen,
@@ -32,7 +36,7 @@ const App = createAppContainer(
   createSwitchNavigator(
     {
       AuthLoading: AuthLoadingScreen,
-      App: AppStack,
+      App: AppDrawer,
       Auth: AuthStack
     },
     {

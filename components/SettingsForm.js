@@ -1,6 +1,21 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import { Switch, Subheading } from 'react-native-paper';
+import { Button, Badge } from 'react-native-paper';
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center'
+  },
+  avatar: {
+    marginTop: 20
+  },
+  email: {
+    fontSize: 20,
+    marginTop: 10
+  }
+});
 
 export default class SettingsForm extends Component {
   constructor(props) {
@@ -13,14 +28,16 @@ export default class SettingsForm extends Component {
   render() {
     return (
       <View>
-        <Subheading>Fingerprint </Subheading>
-        <Switch
-          value={this.state.optionFingerprint}
-          color="#ed6b18"
-          onValueChange={() => {
-            this.setState({ optionFingerprint: !this.state.optionFingerprint });
-          }}
-        />
+        <View>
+          <Button
+            icon="camera"
+            mode="contained"
+            color="black"
+            onPress={() => console.log('Pressed')}
+          >
+            Press me
+          </Button>
+        </View>
       </View>
     );
   }

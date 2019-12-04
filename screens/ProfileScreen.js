@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { Avatar, Divider } from 'react-native-paper';
+import { Avatar, Divider, Button } from 'react-native-paper';
 import SettingsForm from '../components/SettingsForm';
 import MainNavbar from '../components/MainNavbar';
+import auth from '@react-native-firebase/auth';
+import {
+  GoogleSignin,
+  statusCodes
+} from '@react-native-community/google-signin';
 
 export default class ProfileScreen extends Component {
   constructor(props) {
@@ -10,14 +15,34 @@ export default class ProfileScreen extends Component {
     this.state = {};
   }
 
+  _logoutUser = () => {
+    const nav = this.props.navigation;
+    auth()
+      .signOut()
+      .then(function() {
+        GoogleSignin.revokeAccess().then(function() {
+          nav.navigate('SignIn');
+        });
+      });
+  };
   render() {
     return (
       <View>
         <MainNavbar current="profile" />
+
         <View style={styles.container}>
           <Avatar.Icon style={styles.avatar} size={180} icon="account" />
           <Text style={styles.email}>walterbship@gmail.com</Text>
           <Divider />
+
+          <Button
+            mode="contained"
+            color="black"
+            style={styles.button}
+            onPress={() => this.props.navigation.navigate('LogOut')}
+          >
+            Log Out
+          </Button>
           <SettingsForm />
         </View>
       </View>
@@ -32,6 +57,10 @@ const styles = StyleSheet.create({
   },
   avatar: {
     marginTop: 20
+  },
+  button: {
+    width: 400,
+    height: 36
   },
   email: {
     fontSize: 20,
