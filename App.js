@@ -3,6 +3,7 @@ import { StatusBar } from 'react-native';
 
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
+import { createDrawerNavigator } from 'react-navigation-drawer';
 
 import AuthLoadingScreen from './screens/AuthLoadingScreen';
 import ProfileScreen from './screens/ProfileScreen';
@@ -15,7 +16,7 @@ import CreateAccountScreen from './screens/CreateAccountScreen';
 import ForgotPasswordScreen from './screens/ForgotPasswordScreen';
 import NewPostScreen from './screens/NewPostScreen';
 
-const AppStack = createStackNavigator({
+const AppStack = createDrawerNavigator({
   Home: HomeScreen,
   Profile: ProfileScreen,
   NewPost: NewPostScreen
@@ -60,3 +61,12 @@ const theme = {
     accent: '#f1c40f'
   }
 };
+
+const HomeDrawer = createDrawerNavigator({
+  Home: {
+    screen: HomeScreen
+  },
+  Profile: {
+    screen: ProfileScreen
+  }
+});

@@ -1,12 +1,7 @@
 import * as React from 'react';
 import { BottomNavigation, Text } from 'react-native-paper';
 import { View, StyleSheet } from 'react-native';
-
-const TextRoute = () => (
-  <View>
-    <Text>sdfsdf</Text>
-  </View>
-);
+import NewPostText from './NewPostText';
 
 const PhotoRoute = () => <Text>Photo</Text>;
 
@@ -25,7 +20,7 @@ export default class NewPostScreen extends React.Component {
   _handleIndexChange = index => this.setState({ index });
 
   _renderScene = BottomNavigation.SceneMap({
-    text: TextRoute,
+    text: NewPostText,
     photo: PhotoRoute,
     log: LogRoute
   });
