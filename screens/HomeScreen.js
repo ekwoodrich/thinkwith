@@ -24,9 +24,11 @@ class HomeScreen extends Component {
         <FAB
           style={styles.fab}
           icon="plus"
+          color="#ed6b18"
           onPress={() => {
             this.props.navigation.navigate('NewPost');
           }}
+          theme={{ colors: { accent: 'white' } }}
         />
       </SafeAreaView>
     );
