@@ -26,7 +26,7 @@ const MainNavbar = ({ navigation, current }) => {
 
       {!current && (
         <Appbar.Action
-          icon="account"
+          icon="account-circle"
           onPress={() => navigation.navigate('Profile')}
         />
       )}
