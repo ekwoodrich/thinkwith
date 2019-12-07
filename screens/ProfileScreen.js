@@ -39,7 +39,7 @@ export default class ProfileScreen extends Component {
             mode="contained"
             color="black"
             style={styles.button}
-            onPress={() => this.props.navigation.navigate('LogOut')}
+            onPress={this._logoutUser}
           >
             Log Out
           </Button>
