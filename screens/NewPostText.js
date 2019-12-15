@@ -57,7 +57,7 @@ const NewPostText = ({ navigation }) => {
 
     _uploadNote()
       .then(docRef => {
-        alert(docRef);
+        navigation.navigate('Home');
       })
       .catch(error => {
         alert(error);
@@ -75,6 +75,7 @@ const NewPostText = ({ navigation }) => {
         style={styles.newPostInput}
         value={noteText}
         onChangeText={text => setNoteText(text)}
+        placeholder="Write something"
       />
       <Button
         contentStyle={styles.emailButton}

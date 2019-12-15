@@ -13,6 +13,7 @@ exports.noteCreated = functions.firestore
   .document('notes/{noteId}')
   .onCreate((snap, context) => {
     const newNote = snap.data();
+    const uid = context.auth.uid;
     return snap.ref.set(
       {
         createdOn: new Date().toISOString()
