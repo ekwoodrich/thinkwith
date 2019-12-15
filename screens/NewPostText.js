@@ -16,7 +16,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#ed6b18'
   },
   newPostInput: {
-    height: 200
+    height: 200,
+    fontSize: 24
   },
 
   newPostSubmit: {
@@ -42,11 +43,26 @@ const styles = StyleSheet.create({
 });
 const NewPostText = ({ navigation }) => {
   const [noteText, setNoteText] = useState('');
-  const _uploadNote = () => {
-    const ref = firestore().collection('notes');
-  };
+  const ref = firestore().collection('notes');
+
+  async function _uploadNote() {
+    await ref.add({
+      text: noteText
+    });
+  }
   const _saveNote = e => {
-    navigation.navigate('Home');
+    firestore()
+      .collection('notes')
+      .add({ text: 'bar' });
+
+    _uploadNote()
+      .then(docRef => {
+        alert(docRef);
+      })
+      .catch(error => {
+        alert(error);
+      });
+    //navigation.navigate('Home');
     e.preventDefault();
   };
   return (

@@ -36,6 +36,8 @@ target 'thinkwith' do
 
   pod 'RNGoogleSignin', :path => '../node_modules/@react-native-community/google-signin'
 
+  pod 'RNFBFirestore', :path => '../node_modules/@react-native-firebase/firestore'
+
   target 'thinkwithTests' do
     inherit! :search_paths
     # Pods for testing
