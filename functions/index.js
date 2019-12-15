@@ -9,3 +9,14 @@ exports.helloWorld = functions.https.onRequest((request, response) => {
 
 exports.sendWelcomeEmail = functions.auth.user().onCreate(user => {});
 exports.sendByeEmail = functions.auth.user().onDelete(user => {});
+exports.noteCreated = functions.firestore
+  .document('notes/{noteId}')
+  .onCreate((snap, context) => {
+    const newNote = snap.data();
+    return snap.ref.set(
+      {
+        createdOn: new Date().toISOString()
+      },
+      { merge: true }
+    );
+  });
