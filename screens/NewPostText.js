@@ -4,6 +4,7 @@ import { Text, Button } from 'react-native-paper';
 import { TextInput } from 'react-native';
 import { withNavigation } from 'react-navigation';
 import firestore from '@react-native-firebase/firestore';
+import { firebase } from '@react-native-firebase/auth';
 
 const styles = StyleSheet.create({
   newPostView: {
@@ -46,15 +47,14 @@ const NewPostText = ({ navigation }) => {
   const ref = firestore().collection('notes');
 
   async function _uploadNote() {
-    await ref.add({
-      text: noteText
+    let token = await firebase.auth().currentUser.getIdToken(true);
+
+    ref.add({
+      text: noteText,
+      idToken: token
     });
   }
   const _saveNote = e => {
-    firestore()
-      .collection('notes')
-      .add({ text: 'bar' });
-
     _uploadNote()
       .then(docRef => {
         navigation.navigate('Home');
@@ -62,6 +62,7 @@ const NewPostText = ({ navigation }) => {
       .catch(error => {
         alert(error);
       });
+
     //navigation.navigate('Home');
     e.preventDefault();
   };

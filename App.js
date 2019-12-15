@@ -16,6 +16,7 @@ import CreateAccountScreen from './screens/CreateAccountScreen';
 import ForgotPasswordScreen from './screens/ForgotPasswordScreen';
 import NewPostScreen from './screens/NewPostScreen';
 import TasksScreen from './screens/TasksScreen';
+import GoalsScreen from './screens/GoalsScreen';
 
 const NoteStack = createStackNavigator({
   Home: HomeScreen,
@@ -24,7 +25,7 @@ const NoteStack = createStackNavigator({
 const AppDrawer = createDrawerNavigator({
   Home: NoteStack,
   Tasks: TasksScreen,
-  Goals: TasksScreen,
+  Goals: GoalsScreen,
   Profile: ProfileScreen
 });
 
