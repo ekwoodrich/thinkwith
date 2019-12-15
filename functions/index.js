@@ -1,5 +1,6 @@
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
+var app = admin.initializeApp();
 
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
@@ -15,7 +16,6 @@ exports.noteCreated = functions.firestore
   .onCreate((snap, context) => {
     const newNote = snap.data();
     console.log(newNote);
-    admin.initializeApp();
     return admin
       .auth()
       .verifyIdToken(snap.data().idToken)
