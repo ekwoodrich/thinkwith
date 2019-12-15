@@ -3,6 +3,7 @@ import { StyleSheet } from 'react-native';
 import { withNavigation, SafeAreaView } from 'react-navigation';
 import { FAB } from 'react-native-paper';
 import MainNavbar from '../components/MainNavbar';
+import NoteFeed from '../components/NoteFeed';
 
 class HomeScreen extends Component {
   static navigationOptions = {
@@ -19,6 +20,7 @@ class HomeScreen extends Component {
     return (
       <SafeAreaView style={styles.homeContainer}>
         <MainNavbar />
+        <NoteFeed />
         <FAB
           style={styles.fab}
           icon="plus"
