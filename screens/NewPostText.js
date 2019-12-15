@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Text, Button } from 'react-native-paper';
 import { TextInput } from 'react-native';
 import { withNavigation } from 'react-navigation';
+import firestore from '@react-native-firebase/firestore';
 
 const styles = StyleSheet.create({
   newPostView: {
@@ -40,6 +41,10 @@ const styles = StyleSheet.create({
   }
 });
 const NewPostText = ({ navigation }) => {
+  const [noteText, setNoteText] = useState('');
+  const _uploadNote = () => {
+    const ref = firestore().collection('notes');
+  };
   const _saveNote = e => {
     navigation.navigate('Home');
     e.preventDefault();
@@ -52,6 +57,8 @@ const NewPostText = ({ navigation }) => {
         numberOfLines={4}
         textAlignVertical="top"
         style={styles.newPostInput}
+        value={noteText}
+        onChangeText={text => setNoteText(text)}
       />
       <Button
         contentStyle={styles.emailButton}
