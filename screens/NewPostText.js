@@ -1,21 +1,21 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { Text, TextInput, Button } from 'react-native-paper';
+import { Text, Button } from 'react-native-paper';
+import { TextInput } from 'react-native';
+import { withNavigation } from 'react-navigation';
 
 const styles = StyleSheet.create({
   newPostView: {
+    padding: 20,
     display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center'
+    justifyContent: 'space-between',
+    height: '100%'
   },
   newPostNav: {
     backgroundColor: '#ed6b18'
   },
   newPostInput: {
-    margin: 30,
-    width: 200,
-    backgroundColor: 'transparent'
+    height: 200
   },
 
   newPostSubmit: {
@@ -39,15 +39,25 @@ const styles = StyleSheet.create({
     marginTop: 10
   }
 });
-const NewPostText = () => {
+const NewPostText = ({ navigation }) => {
+  const _saveNote = e => {
+    navigation.navigate('Home');
+    e.preventDefault();
+  };
   return (
     <View style={styles.newPostView}>
-      <TextInput style={styles.newPostInput} />
+      <TextInput
+        autoFocus
+        multiline={true}
+        numberOfLines={4}
+        textAlignVertical="top"
+        style={styles.newPostInput}
+      />
       <Button
         contentStyle={styles.emailButton}
         mode="contained"
         color="#ed6b18"
-        onPress={this._signInEmail}
+        onPress={_saveNote}
       >
         Save note
       </Button>
@@ -55,4 +65,4 @@ const NewPostText = () => {
   );
 };
 
-export default NewPostText;
+export default withNavigation(NewPostText);

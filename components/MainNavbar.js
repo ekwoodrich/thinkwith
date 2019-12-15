@@ -18,19 +18,29 @@ const styles = StyleSheet.create({
     fontSize: 22
   }
 });
-const MainNavbar = ({ navigation, current }) => {
+const MainNavbar = ({ navigation, screen }) => {
   return (
     <Appbar style={styles.appbar}>
       <Appbar.Action icon="menu" onPress={() => navigation.openDrawer()} />
-      <TextInput style={styles.search} placeholder="Search notes" />
 
-      {!current && (
+      {(!screen || screen === 'notes') && (
+        <TextInput style={styles.search} placeholder="Search notes" />
+      )}
+
+      {screen === 'goals' && (
+        <TextInput style={styles.search} placeholder="Search goals" />
+      )}
+      {screen === 'tasks' && (
+        <TextInput style={styles.search} placeholder="Search tasks" />
+      )}
+
+      {(!screen || screen !== 'profile') && (
         <Appbar.Action
           icon="account-circle"
           onPress={() => navigation.navigate('Profile')}
         />
       )}
-      {current == 'profile' && (
+      {screen === 'profile' && (
         <Appbar.Action
           icon="home"
           onPress={() => navigation.navigate('Home')}

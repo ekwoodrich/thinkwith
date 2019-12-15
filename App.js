@@ -15,6 +15,7 @@ import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 import CreateAccountScreen from './screens/CreateAccountScreen';
 import ForgotPasswordScreen from './screens/ForgotPasswordScreen';
 import NewPostScreen from './screens/NewPostScreen';
+import TasksScreen from './screens/TasksScreen';
 
 const NoteStack = createStackNavigator({
   Home: HomeScreen,
@@ -22,6 +23,8 @@ const NoteStack = createStackNavigator({
 });
 const AppDrawer = createDrawerNavigator({
   Home: NoteStack,
+  Tasks: TasksScreen,
+  Goals: TasksScreen,
   Profile: ProfileScreen
 });
 
@@ -65,12 +68,3 @@ const theme = {
     accent: '#f1c40f'
   }
 };
-
-const HomeDrawer = createDrawerNavigator({
-  Home: {
-    screen: HomeScreen
-  },
-  Profile: {
-    screen: ProfileScreen
-  }
-});

@@ -28,7 +28,7 @@ export default class ProfileScreen extends Component {
   render() {
     return (
       <SafeAreaView>
-        <MainNavbar current="profile" />
+        <MainNavbar screen="profile" />
 
         <View style={styles.container}>
           <Avatar.Icon style={styles.avatar} size={180} icon="account" />
@@ -36,8 +36,8 @@ export default class ProfileScreen extends Component {
           <Divider />
 
           <Button
+            color="#ed6b18"
             mode="contained"
-            color="black"
             style={styles.button}
             onPress={this._logoutUser}
           >
@@ -56,7 +56,8 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   avatar: {
-    marginTop: 20
+    marginTop: 20,
+    backgroundColor: '#404040'
   },
   button: {
     width: 400,
