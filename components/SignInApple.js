@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import { StyleSheet } from 'react-native';
-import { Button, TextInput, Subheading, Divider } from 'react-native-paper';
+import { Button } from 'react-native-paper';
 
 export default class SignInApple extends Component {
   constructor(props) {

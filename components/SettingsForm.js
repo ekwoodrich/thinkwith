@@ -1,21 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { Switch, Subheading } from 'react-native-paper';
-import { Button, Badge } from 'react-native-paper';
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center'
-  },
-  avatar: {
-    marginTop: 20
-  },
-  email: {
-    fontSize: 20,
-    marginTop: 10
-  }
-});
+import { View } from 'react-native';
+import { Button } from 'react-native-paper';
 
 export default class SettingsForm extends Component {
   constructor(props) {

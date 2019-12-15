@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { withNavigation, SafeAreaView } from 'react-navigation';
-import { Button, FAB } from 'react-native-paper';
-import { Appbar } from 'react-native-paper';
-import ProfileScreen from './ProfileScreen';
+import { FAB } from 'react-native-paper';
 import MainNavbar from '../components/MainNavbar';
 
 class HomeScreen extends Component {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, ScrollView, Alert } from 'react-native';
+import { View, Text, Image, ScrollView } from 'react-native';
 import { Button } from 'react-native-paper';
 import { StyleSheet } from 'react-native';
 import SignInForm from '../components/SignInForm';
@@ -8,7 +8,6 @@ import SignInApple from '../components/SignInApple';
 import SignInAnon from '../components/SignInAnon';
 import SignInCreate from '../components/SignInCreate';
 import { GoogleSignin } from '@react-native-community/google-signin';
-import { firebase } from '@react-native-firebase/auth';
 
 class SignInScreen extends React.Component {
   componentDidMount = () => {

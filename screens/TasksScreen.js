@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Text, FAB } from 'react-native-paper';
-import { SafeAreaView, View, StyleSheet } from 'react-native';
+import { FAB } from 'react-native-paper';
+import { SafeAreaView, StyleSheet } from 'react-native';
 import MainNavbar from '../components/MainNavbar';
 class TasksScreen extends Component {
   render() {

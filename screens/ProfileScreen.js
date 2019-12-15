@@ -4,10 +4,7 @@ import { Avatar, Divider, Button } from 'react-native-paper';
 import SettingsForm from '../components/SettingsForm';
 import MainNavbar from '../components/MainNavbar';
 import auth from '@react-native-firebase/auth';
-import {
-  GoogleSignin,
-  statusCodes
-} from '@react-native-community/google-signin';
+import { GoogleSignin } from '@react-native-community/google-signin';
 
 export default class ProfileScreen extends Component {
   constructor(props) {

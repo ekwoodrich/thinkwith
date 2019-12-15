@@ -1,8 +1,7 @@
 import React from 'react';
 import { Appbar } from 'react-native-paper';
-import { View, Text, StyleSheet, Image, TextInput } from 'react-native';
+import { StyleSheet, TextInput } from 'react-native';
 import { withNavigation } from 'react-navigation';
-import { Searchbar } from 'react-native-paper';
 
 const styles = StyleSheet.create({
   appbar: {
