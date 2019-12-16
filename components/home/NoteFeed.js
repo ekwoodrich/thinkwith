@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, ScrollView } from 'react-native';
+import { Text, View, ScrollView, RefreshControl } from 'react-native';
 import firestore from '@react-native-firebase/firestore';
 import { Avatar, Button, Card, Title, Paragraph } from 'react-native-paper';
 import { firebase } from '@react-native-firebase/auth';
@@ -12,6 +12,12 @@ function NoteCard(note) {
       </Card.Content>
     </Card>
   );
+}
+
+function wait(timeout) {
+  return new Promise(resolve => {
+    setTimeout(resolve, timeout);
+  });
 }
 
 function NoteFeed() {
@@ -38,8 +44,37 @@ function NoteFeed() {
     }
   }, [ref]);
 
+  const [refreshing, setRefreshing] = React.useState(false);
+
+  const onRefresh = React.useCallback(() => {
+    setRefreshing(true);
+    if (firebase.auth().currentUser) {
+      return ref
+        .where('uid', '==', firebase.auth().currentUser.uid)
+        .get()
+        .then(query => {
+          const list = [];
+          query.forEach(doc => {
+            const { text, createdOn } = doc.data();
+            list.push({
+              id: doc.id,
+              text,
+              createdOn
+            });
+          });
+          setNotes(list);
+          setRefreshing(false);
+        });
+    }
+  }, [ref]);
+
   return (
-    <ScrollView style={{ flex: 1 }}>
+    <ScrollView
+      style={{ flex: 1 }}
+      refreshControl={
+        <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+      }
+    >
       <View>{noteItems}</View>
     </ScrollView>
   );
