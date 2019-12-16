@@ -20,20 +20,22 @@ function NoteFeed() {
   const noteItems = notes.map(note => NoteCard(note));
 
   useEffect(() => {
-    return ref
-      .where('uid', '==', firebase.auth().currentUser.uid)
-      .onSnapshot(querySnapshot => {
-        const list = [];
-        querySnapshot.forEach(doc => {
-          const { text, createdOn } = doc.data();
-          list.push({
-            id: doc.id,
-            text,
-            createdOn
+    if (firebase.auth().currentUser) {
+      return ref
+        .where('uid', '==', firebase.auth().currentUser.uid)
+        .onSnapshot(querySnapshot => {
+          const list = [];
+          querySnapshot.forEach(doc => {
+            const { text, createdOn } = doc.data();
+            list.push({
+              id: doc.id,
+              text,
+              createdOn
+            });
           });
+          setNotes(list);
         });
-        setNotes(list);
-      });
+    }
   }, [ref]);
 
   return (

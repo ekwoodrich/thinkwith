@@ -2,11 +2,11 @@ import React from 'react';
 import { View, Text, Image, ScrollView } from 'react-native';
 import { Button } from 'react-native-paper';
 import { StyleSheet } from 'react-native';
-import SignInForm from '../components/SignInForm';
-import SignInGoogle from '../components/SignInGoogle';
-import SignInApple from '../components/SignInApple';
-import SignInAnon from '../components/SignInAnon';
-import SignInCreate from '../components/SignInCreate';
+import SignInForm from '../../components/auth/SignInForm';
+import SignInGoogle from '../../components/auth/SignInGoogle';
+import SignInApple from '../../components/auth/SignInApple';
+import SignInAnon from '../../components/auth/SignInAnon';
+import SignInCreate from '../../components/auth/SignInCreate';
 import { GoogleSignin } from '@react-native-community/google-signin';
 
 class SignInScreen extends React.Component {
@@ -40,7 +40,7 @@ class SignInScreen extends React.Component {
         <View style={styles.logo}>
           <Image
             style={styles.logoImage}
-            source={require('../assets/img/thinkwith_icon.png')}
+            source={require('../../assets/img/thinkwith_icon.png')}
           />
         </View>
         <SignInForm />

@@ -16,7 +16,7 @@ export default class SignInApple extends Component {
           contentStyle={styles.appleButton}
           mode="contained"
           color="#111"
-          icon={require('../assets/img/apple-64.png')}
+          icon={require('../../assets/img/apple-64.png')}
           onPress={() => {
             console.log('sign in with apple');
           }}

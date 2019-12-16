@@ -2,11 +2,7 @@ import React from 'react';
 import { View, Text, Image } from 'react-native';
 import { Button, TextInput, Subheading, Divider } from 'react-native-paper';
 import { StyleSheet } from 'react-native';
-import SignInCreateForm from '../components/SignInCreateForm';
-import SignInGoogle from '../components/SignInGoogle';
-import SignInApple from '../components/SignInApple';
-import SignInAnon from '../components/SignInAnon';
-import SignInCreate from '../components/SignInCreate';
+import SignInCreateForm from '../../components/auth/SignInCreateForm';
 
 class CreateAccountScreen extends React.Component {
   _signInWithEmail = () => {
@@ -25,7 +21,7 @@ class CreateAccountScreen extends React.Component {
         <View style={styles.logo}>
           <Image
             style={styles.logoImage}
-            source={require('../assets/img/thinkwith_icon.png')}
+            source={require('../../assets/img/thinkwith_icon.png')}
           />
         </View>
         <SignInCreateForm />

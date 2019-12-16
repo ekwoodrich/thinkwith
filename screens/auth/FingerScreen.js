@@ -35,7 +35,7 @@ class FingerScreen extends React.Component {
         <View style={styles.logo}>
           <Image
             style={styles.logoImage}
-            source={require('../assets/img/thinkwith_icon.png')}
+            source={require('../../assets/img/thinkwith_icon.png')}
           />
         </View>
         <View style={styles.logo}>

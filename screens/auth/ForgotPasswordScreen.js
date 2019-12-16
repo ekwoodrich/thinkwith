@@ -2,12 +2,12 @@ import React from 'react';
 import { View, Text, Image, Alert } from 'react-native';
 import { Button, TextInput, Subheading, Divider } from 'react-native-paper';
 import { StyleSheet } from 'react-native';
-import SignInCreateForm from '../components/SignInCreateForm';
-import SignInGoogle from '../components/SignInGoogle';
-import SignInApple from '../components/SignInApple';
-import SignInAnon from '../components/SignInAnon';
-import SignInCreate from '../components/SignInCreate';
-import SignInForgot from '../components/SignInForgot';
+import SignInCreateForm from '../../components/auth/SignInCreateForm';
+import SignInGoogle from '../../components/auth/SignInGoogle';
+import SignInApple from '../../components/auth/SignInApple';
+import SignInAnon from '../../components/auth/SignInAnon';
+import SignInCreate from '../../components/auth/SignInCreate';
+import SignInForgot from '../../components/auth/SignInForgot';
 import { firebase } from '@react-native-firebase/auth';
 
 class ForgotPasswordScreen extends React.Component {
@@ -33,7 +33,7 @@ class ForgotPasswordScreen extends React.Component {
         <View style={styles.logo}>
           <Image
             style={styles.logoImage}
-            source={require('../assets/img/thinkwith_icon.png')}
+            source={require('../../assets/img/thinkwith_icon.png')}
           />
         </View>
         {this.state.passwordSent && (

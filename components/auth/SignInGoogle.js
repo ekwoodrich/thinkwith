@@ -43,7 +43,7 @@ export default class SignInGoogle extends Component {
           color="white"
           icon={({ size, color }) => (
             <Image
-              source={require('../assets/img/g-logo.png')}
+              source={require('../../assets/img/g-logo.png')}
               style={{ width: 18, height: 18 }}
             />
           )}

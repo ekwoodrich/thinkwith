@@ -5,15 +5,15 @@ import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createDrawerNavigator } from 'react-navigation-drawer';
 
-import AuthLoadingScreen from './screens/AuthLoadingScreen';
+import AuthLoadingScreen from './screens/auth/AuthLoadingScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import HomeScreen from './screens/HomeScreen';
-import SignInScreen from './screens/SignInScreen';
-import FingerScreen from './screens/FingerScreen';
+import SignInScreen from './screens/auth/SignInScreen';
+import FingerScreen from './screens/auth/FingerScreen';
 
 import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
-import CreateAccountScreen from './screens/CreateAccountScreen';
-import ForgotPasswordScreen from './screens/ForgotPasswordScreen';
+import CreateAccountScreen from './screens/auth/CreateAccountScreen';
+import ForgotPasswordScreen from './screens/auth/ForgotPasswordScreen';
 import NewPostScreen from './screens/NewPostScreen';
 import TasksScreen from './screens/TasksScreen';
 import GoalsScreen from './screens/GoalsScreen';

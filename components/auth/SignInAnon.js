@@ -21,7 +21,7 @@ export default class SignInAnon extends Component {
           color="#585858"
           icon={({ size, color }) => (
             <Image
-              source={require('../assets/img/incognito.png')}
+              source={require('../../assets/img/incognito.png')}
               style={{ width: 20, height: 20 }}
             />
           )}
