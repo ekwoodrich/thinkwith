@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { FAB } from 'react-native-paper';
 import { SafeAreaView, StyleSheet } from 'react-native';
-import MainNavbar from '../components/MainNavbar';
+import MainNavbar from '../../components/home/MainNavbar';
 class GoalsScreen extends Component {
   render() {
     return (

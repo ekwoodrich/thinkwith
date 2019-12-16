@@ -1,22 +1,23 @@
 import React from 'react';
 import { StatusBar } from 'react-native';
+import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createDrawerNavigator } from 'react-navigation-drawer';
 
 import AuthLoadingScreen from './screens/auth/AuthLoadingScreen';
-import ProfileScreen from './screens/ProfileScreen';
-import HomeScreen from './screens/HomeScreen';
+import ProfileScreen from './screens/profile/ProfileScreen';
+import HomeScreen from './screens/home/HomeScreen';
+import TasksScreen from './screens/home/TasksScreen';
+import GoalsScreen from './screens/home/GoalsScreen';
+
+import CreateAccountScreen from './screens/auth/CreateAccountScreen';
+import ForgotPasswordScreen from './screens/auth/ForgotPasswordScreen';
 import SignInScreen from './screens/auth/SignInScreen';
 import FingerScreen from './screens/auth/FingerScreen';
 
-import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
-import CreateAccountScreen from './screens/auth/CreateAccountScreen';
-import ForgotPasswordScreen from './screens/auth/ForgotPasswordScreen';
-import NewPostScreen from './screens/NewPostScreen';
-import TasksScreen from './screens/TasksScreen';
-import GoalsScreen from './screens/GoalsScreen';
+import NewPostScreen from './screens/new/NewPostScreen';
 
 const NoteStack = createStackNavigator({
   Home: HomeScreen,

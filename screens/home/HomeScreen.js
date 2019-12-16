@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { StyleSheet } from 'react-native';
 import { withNavigation, SafeAreaView } from 'react-navigation';
 import { FAB } from 'react-native-paper';
-import MainNavbar from '../components/MainNavbar';
-import NoteFeed from '../components/NoteFeed';
+import MainNavbar from '../../components/home/MainNavbar';
+import NoteFeed from '../../components/home/NoteFeed';
 
 class HomeScreen extends Component {
   static navigationOptions = {

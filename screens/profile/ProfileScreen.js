@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
 import { Avatar, Divider, Button } from 'react-native-paper';
-import SettingsForm from '../components/SettingsForm';
-import MainNavbar from '../components/MainNavbar';
+import SettingsForm from '../../components/profile/SettingsForm';
+import MainNavbar from '../../components/home/MainNavbar';
 import auth from '@react-native-firebase/auth';
 import { GoogleSignin } from '@react-native-community/google-signin';
 
