@@ -5,6 +5,7 @@ import SettingsForm from '../../components/profile/SettingsForm';
 import MainNavbar from '../../components/home/MainNavbar';
 import auth from '@react-native-firebase/auth';
 import { GoogleSignin } from '@react-native-community/google-signin';
+import ThinkButton from '../../components/ui/ThinkButton';
 
 export default class ProfileScreen extends Component {
   constructor(props) {
@@ -32,14 +33,9 @@ export default class ProfileScreen extends Component {
           <Text style={styles.email}>walterbship@gmail.com</Text>
           <Divider />
 
-          <Button
-            color="#ed6b18"
-            mode="contained"
-            style={styles.button}
-            onPress={this._logoutUser}
-          >
-            Log Out
-          </Button>
+          <ThinkButton vspace={true}>Change Password</ThinkButton>
+          <ThinkButton vspace={true}>Log Out</ThinkButton>
+          <ThinkButton vspace={true}>Delete Account</ThinkButton>
           <SettingsForm />
         </View>
       </SafeAreaView>

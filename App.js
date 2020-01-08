@@ -18,6 +18,7 @@ import SignInScreen from './screens/auth/SignInScreen';
 import FingerScreen from './screens/auth/FingerScreen';
 
 import NewPostScreen from './screens/new/NewPostScreen';
+import CalendarScreen from './screens/home/CalendarScreen';
 
 const NoteStack = createStackNavigator({
   Home: HomeScreen,
@@ -27,7 +28,8 @@ const AppDrawer = createDrawerNavigator({
   Home: NoteStack,
   Tasks: TasksScreen,
   Goals: GoalsScreen,
-  Profile: ProfileScreen
+  Profile: ProfileScreen,
+  Calendar: CalendarScreen
 });
 
 const AuthStack = createStackNavigator({
@@ -63,7 +65,7 @@ export default () => {
 const theme = {
   ...DefaultTheme,
   roundness: 2,
-  dark: true,
+  dark: false,
   colors: {
     ...DefaultTheme.colors,
     primary: '#3498db',

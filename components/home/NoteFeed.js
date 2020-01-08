@@ -3,16 +3,7 @@ import { Text, View, ScrollView, RefreshControl } from 'react-native';
 import firestore from '@react-native-firebase/firestore';
 import { Avatar, Button, Card, Title, Paragraph } from 'react-native-paper';
 import { firebase } from '@react-native-firebase/auth';
-
-function NoteCard(note) {
-  return (
-    <Card>
-      <Card.Content>
-        <Paragraph>{note.text}</Paragraph>
-      </Card.Content>
-    </Card>
-  );
-}
+import NoteCard from './NoteCard';
 
 function wait(timeout) {
   return new Promise(resolve => {
@@ -20,10 +11,10 @@ function wait(timeout) {
   });
 }
 
-function NoteFeed() {
+function NoteFeed({ limit, dateStart, dateEnd }) {
   const ref = firestore().collection('notes');
   const [notes, setNotes] = useState([]);
-  const noteItems = notes.map(note => NoteCard(note));
+  const noteItems = notes.map(note => <NoteCard note={note} />);
 
   useEffect(() => {
     if (firebase.auth().currentUser) {
