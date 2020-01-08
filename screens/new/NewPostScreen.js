@@ -26,15 +26,7 @@ export default class NewPostScreen extends React.Component {
   });
 
   render() {
-    return (
-      <BottomNavigation
-        barStyle={styles.newPostNav}
-        activeColor="white"
-        navigationState={this.state}
-        onIndexChange={this._handleIndexChange}
-        renderScene={this._renderScene}
-      />
-    );
+    return <NewPostText />;
   }
 }
 

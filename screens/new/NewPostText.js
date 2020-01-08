@@ -5,6 +5,7 @@ import { TextInput } from 'react-native';
 import { withNavigation } from 'react-navigation';
 import firestore from '@react-native-firebase/firestore';
 import { firebase } from '@react-native-firebase/auth';
+import ThinkButton from '../../components/ui/ThinkButton';
 
 const styles = StyleSheet.create({
   newPostView: {
@@ -78,14 +79,7 @@ const NewPostText = ({ navigation }) => {
         onChangeText={text => setNoteText(text)}
         placeholder="Write something"
       />
-      <Button
-        contentStyle={styles.emailButton}
-        mode="contained"
-        color="#ed6b18"
-        onPress={_saveNote}
-      >
-        Save note
-      </Button>
+      <ThinkButton onPress={_saveNote}>Save Note</ThinkButton>
     </View>
   );
 };

@@ -26,10 +26,13 @@ const NoteStack = createStackNavigator({
 });
 const AppDrawer = createDrawerNavigator({
   Home: NoteStack,
+  Calendar: CalendarScreen,
+  Notes: TasksScreen,
   Tasks: TasksScreen,
   Goals: GoalsScreen,
-  Profile: ProfileScreen,
-  Calendar: CalendarScreen
+  Medications: TasksScreen,
+  Substances: TasksScreen,
+  Profile: ProfileScreen
 });
 
 const AuthStack = createStackNavigator({

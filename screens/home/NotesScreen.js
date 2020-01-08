@@ -5,7 +5,7 @@ import MainNavbar from '../../components/home/MainNavbar';
 import NoteFeed from '../../components/home/NoteFeed';
 import ThinkFab from '../../components/home/ThinkFab';
 
-class HomeScreen extends Component {
+class NotesScreen extends Component {
   static navigationOptions = {
     drawerLabel: 'Home',
 
@@ -42,4 +42,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default withNavigation(HomeScreen);
+export default withNavigation(NotesScreen);
