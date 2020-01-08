@@ -79,7 +79,10 @@ const styles = StyleSheet.create({
   },
   forgot: {
     marginTop: 10,
-    marginBottom: 10
+    marginBottom: 10,
+    padding: 6,
+    marginLeft: 30,
+    marginRight: 30
   },
   divider: {
     color: 'black',

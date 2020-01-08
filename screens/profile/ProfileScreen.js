@@ -34,7 +34,9 @@ export default class ProfileScreen extends Component {
           <Divider />
 
           <ThinkButton vspace={true}>Change Password</ThinkButton>
-          <ThinkButton vspace={true}>Log Out</ThinkButton>
+          <ThinkButton vspace={true} onPress={this._logoutUser}>
+            Log Out
+          </ThinkButton>
           <ThinkButton vspace={true}>Delete Account</ThinkButton>
           <SettingsForm />
         </View>
