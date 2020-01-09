@@ -22,17 +22,22 @@ const MainNavbar = ({ navigation, screen }) => {
     <Appbar style={styles.appbar}>
       <Appbar.Action icon="menu" onPress={() => navigation.openDrawer()} />
 
-      {(!screen || screen === 'notes') && (
-        <TextInput style={styles.search} placeholder="Search notes" />
+      {(!screen || screen === 'home') && (
+        <TextInput style={styles.search} placeholder="Search all" />
       )}
 
-      {screen === 'goals' && (
+      {screen === 'notes' && (
         <TextInput style={styles.search} placeholder="Search goals" />
       )}
       {screen === 'tasks' && (
         <TextInput style={styles.search} placeholder="Search tasks" />
       )}
-
+      {screen === 'goals' && (
+        <TextInput style={styles.search} placeholder="Search tasks" />
+      )}
+      {screen === 'meds' && (
+        <TextInput style={styles.search} placeholder="Search medications" />
+      )}
       {(!screen || screen !== 'profile') && (
         <Appbar.Action
           icon="account-circle"

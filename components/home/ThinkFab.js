@@ -20,14 +20,20 @@ function ThinkFab({ navigation }) {
           label: 'Note',
           onPress: () => navigation.navigate('NewPost')
         },
+
         {
-          icon: 'star',
-          label: 'Goal',
-          onPress: () => console.log('Pressed email')
+          icon: 'camera',
+          label: 'Photo',
+          onPress: () => navigation.navigate('NewPost')
         },
         {
           icon: 'check',
           label: 'Task',
+          onPress: () => console.log('Pressed email')
+        },
+        {
+          icon: 'star',
+          label: 'Goal',
           onPress: () => console.log('Pressed email')
         },
         {
