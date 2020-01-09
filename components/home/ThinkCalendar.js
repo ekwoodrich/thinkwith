@@ -37,9 +37,6 @@ function ThinkCalendar({ navigation }) {
           });
         }}
       />
-      <View>
-        <Subheading>Jan. 8, 2019</Subheading>
-      </View>
       <NoteFeed />
     </View>
   );

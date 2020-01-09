@@ -10,7 +10,6 @@ import AuthLoadingScreen from './screens/auth/AuthLoadingScreen';
 import ProfileScreen from './screens/profile/ProfileScreen';
 import HomeScreen from './screens/home/HomeScreen';
 import TasksScreen from './screens/home/TasksScreen';
-import GoalsScreen from './screens/home/GoalsScreen';
 
 import CreateAccountScreen from './screens/auth/CreateAccountScreen';
 import ForgotPasswordScreen from './screens/auth/ForgotPasswordScreen';

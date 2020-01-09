@@ -18,7 +18,7 @@ class NotesScreen extends Component {
   render() {
     return (
       <SafeAreaView style={styles.homeContainer}>
-        <MainNavbar />
+        <MainNavbar screen="notes" />
         <NoteFeed />
         <ThinkFab />
       </SafeAreaView>

@@ -27,13 +27,16 @@ const MainNavbar = ({ navigation, screen }) => {
       )}
 
       {screen === 'notes' && (
-        <TextInput style={styles.search} placeholder="Search goals" />
+        <TextInput style={styles.search} placeholder="Search notes" />
       )}
       {screen === 'tasks' && (
         <TextInput style={styles.search} placeholder="Search tasks" />
       )}
       {screen === 'goals' && (
         <TextInput style={styles.search} placeholder="Search tasks" />
+      )}
+      {screen === 'calendar' && (
+        <TextInput style={styles.search} placeholder="Search" />
       )}
       {(!screen || screen !== 'profile') && (
         <Appbar.Action

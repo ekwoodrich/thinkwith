@@ -24,12 +24,17 @@ function ThinkFab({ navigation }) {
         {
           icon: 'camera',
           label: 'Photo',
-          onPress: () => navigation.navigate('NewPost')
+          onPress: () => navigation.navigate('Pressed photo')
         },
         {
           icon: 'check',
           label: 'Task',
-          onPress: () => console.log('Pressed email')
+          onPress: () => console.log('Pressed task')
+        },
+        {
+          icon: 'star',
+          label: 'Goal',
+          onPress: () => console.log('Pressed goal')
         }
       ]}
       onStateChange={nextOpen => setOpen(!open)}
