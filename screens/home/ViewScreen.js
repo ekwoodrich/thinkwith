@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Text } from 'react-native';
 import { withNavigation, SafeAreaView } from 'react-navigation';
 import { FAB } from 'react-native-paper';
 import MainNavbar from '../../components/home/MainNavbar';
@@ -7,9 +7,7 @@ import NoteFeed from '../../components/home/NoteFeed';
 
 class ViewScreen extends Component {
   static navigationOptions = {
-    drawerLabel: 'Home',
-
-    header: null
+    drawerLabel: 'Home'
   };
   constructor(props) {
     super(props);
@@ -19,7 +17,7 @@ class ViewScreen extends Component {
   render() {
     return (
       <SafeAreaView style={styles.homeContainer}>
-        <MainNavbar />
+        <Text>view screen</Text>
       </SafeAreaView>
     );
   }

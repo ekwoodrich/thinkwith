@@ -20,10 +20,12 @@ import FingerScreen from './screens/auth/FingerScreen';
 import NewPostScreen from './screens/new/NewPostScreen';
 import CalendarScreen from './screens/home/CalendarScreen';
 import NotesScreen from './screens/home/NotesScreen';
+import ViewScreen from './screens/home/ViewScreen';
 
 const NoteStack = createStackNavigator({
   Home: HomeScreen,
-  NewPost: NewPostScreen
+  NewPost: NewPostScreen,
+  View: ViewScreen
 });
 const AppDrawer = createDrawerNavigator({
   Home: NoteStack,
@@ -71,7 +73,6 @@ const theme = {
   colors: {
     ...DefaultTheme.colors,
     primary: '#3498db',
-    accent: '#f1c40f',
-    surface: '#efefef'
+    accent: '#f1c40f'
   }
 };

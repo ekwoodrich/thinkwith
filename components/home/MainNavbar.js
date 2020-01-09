@@ -44,12 +44,6 @@ const MainNavbar = ({ navigation, screen }) => {
           onPress={() => navigation.navigate('Profile')}
         />
       )}
-      {screen === 'profile' && (
-        <Appbar.Action
-          icon="home"
-          onPress={() => navigation.navigate('Home')}
-        />
-      )}
     </Appbar>
   );
 };

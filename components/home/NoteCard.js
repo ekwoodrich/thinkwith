@@ -4,10 +4,16 @@ import firestore from '@react-native-firebase/firestore';
 import { Avatar, Button, Card, Title, Paragraph } from 'react-native-paper';
 import { firebase } from '@react-native-firebase/auth';
 import { StyleSheet } from 'react-native';
+import { withNavigation } from 'react-navigation';
 
-function NoteCard({ note }) {
+function NoteCard({ note, navigation }) {
+  const _goToCard = () => {
+    console.log('card pressed');
+    navigation.navigate('View');
+  };
+
   return (
-    <Card style={styles.noteCard}>
+    <Card onPress={_goToCard} style={styles.noteCard}>
       <Card.Content>
         <Paragraph>{note.text}</Paragraph>
       </Card.Content>
@@ -19,10 +25,10 @@ const styles = StyleSheet.create({
   noteCard: {
     borderRadius: 4,
     borderWidth: 0.5,
-    borderColor: '#d6d7da',
-    marginBottom: 5,
-    marginTop: 5
+    borderColor: 'lightgray',
+    marginBottom: 2,
+    marginTop: 2
   }
 });
 
-export default NoteCard;
+export default withNavigation(NoteCard);
