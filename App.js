@@ -32,7 +32,6 @@ const AppDrawer = createDrawerNavigator({
   Calendar: CalendarScreen,
   Notes: NotesScreen,
   Tasks: TasksScreen,
-  Medications: TasksScreen,
   Profile: ProfileScreen
 });
 

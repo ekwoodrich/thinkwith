@@ -30,11 +30,6 @@ function ThinkFab({ navigation }) {
           icon: 'check',
           label: 'Task',
           onPress: () => console.log('Pressed email')
-        },
-        {
-          icon: 'pill',
-          label: 'Medication',
-          onPress: () => console.log('Pressed notifications')
         }
       ]}
       onStateChange={nextOpen => setOpen(!open)}

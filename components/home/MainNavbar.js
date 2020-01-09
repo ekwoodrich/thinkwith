@@ -23,7 +23,7 @@ const MainNavbar = ({ navigation, screen }) => {
       <Appbar.Action icon="menu" onPress={() => navigation.openDrawer()} />
 
       {(!screen || screen === 'home') && (
-        <TextInput style={styles.search} placeholder="Search all" />
+        <TextInput style={styles.search} placeholder="Search" />
       )}
 
       {screen === 'notes' && (
@@ -34,9 +34,6 @@ const MainNavbar = ({ navigation, screen }) => {
       )}
       {screen === 'goals' && (
         <TextInput style={styles.search} placeholder="Search tasks" />
-      )}
-      {screen === 'meds' && (
-        <TextInput style={styles.search} placeholder="Search medications" />
       )}
       {(!screen || screen !== 'profile') && (
         <Appbar.Action
