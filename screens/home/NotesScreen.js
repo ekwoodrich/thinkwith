@@ -7,8 +7,7 @@ import ThinkFab from '../../components/home/ThinkFab';
 
 class NotesScreen extends Component {
   static navigationOptions = {
-    drawerLabel: 'Home',
-
+    drawerLabel: 'Notes',
     header: null
   };
   constructor(props) {

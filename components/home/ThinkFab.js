@@ -32,16 +32,6 @@ function ThinkFab({ navigation }) {
           onPress: () => console.log('Pressed email')
         },
         {
-          icon: 'star',
-          label: 'Goal',
-          onPress: () => console.log('Pressed email')
-        },
-        {
-          icon: 'coffee',
-          label: 'Substance',
-          onPress: () => console.log('Pressed email')
-        },
-        {
           icon: 'pill',
           label: 'Medication',
           onPress: () => console.log('Pressed notifications')
