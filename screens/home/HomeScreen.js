@@ -30,11 +30,6 @@ const styles = StyleSheet.create({
   appbar: {
     color: 'white'
   },
-  fab: {
-    position: 'absolute',
-    right: 20,
-    bottom: 20
-  },
   homeContainer: {
     position: 'absolute',
     height: '100%',

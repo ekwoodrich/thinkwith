@@ -6,6 +6,13 @@ import MainNavbar from '../../components/home/MainNavbar';
 import auth from '@react-native-firebase/auth';
 import { GoogleSignin } from '@react-native-community/google-signin';
 import ThinkButton from '../../components/ui/ThinkButton';
+import { BottomNavigation } from 'react-native-paper';
+
+const Account = () => <Text>Account</Text>;
+
+const Settings = () => <Text>Settings</Text>;
+
+const Export = () => <Text>Export</Text>;
 
 export default class ProfileScreen extends Component {
   constructor(props) {

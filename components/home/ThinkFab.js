@@ -2,49 +2,48 @@ import React from 'react';
 import { FAB, Portal, Provider } from 'react-native-paper';
 import { StyleSheet } from 'react-native';
 import { useState } from 'react';
+import { withNavigation } from 'react-navigation';
 
-function ThinkFab(props) {
+function ThinkFab({ navigation }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <Portal>
-      <FAB.Group
-        open={open}
-        icon={'plus'}
-        style={styles.fabGroup}
-        fabStyle={styles.fab}
-        color="white"
-        actions={[
-          {
-            icon: 'lead-pencil',
-            label: 'Note',
-            onPress: () => console.log('Pressed star')
-          },
-          {
-            icon: 'star',
-            label: 'Goal',
-            onPress: () => console.log('Pressed email')
-          },
-          {
-            icon: 'check',
-            label: 'Task',
-            onPress: () => console.log('Pressed email')
-          },
-          {
-            icon: 'coffee',
-            label: 'Substance',
-            onPress: () => console.log('Pressed email')
-          },
-          {
-            icon: 'pill',
-            label: 'Medication',
-            onPress: () => console.log('Pressed notifications')
-          }
-        ]}
-        onStateChange={nextOpen => setOpen(!open)}
-        onPress={() => {}}
-      />
-    </Portal>
+    <FAB.Group
+      open={open}
+      icon={'plus'}
+      style={styles.fabGroup}
+      fabStyle={styles.fab}
+      color="white"
+      actions={[
+        {
+          icon: 'lead-pencil',
+          label: 'Note',
+          onPress: () => navigation.navigate('NewPost')
+        },
+        {
+          icon: 'star',
+          label: 'Goal',
+          onPress: () => console.log('Pressed email')
+        },
+        {
+          icon: 'check',
+          label: 'Task',
+          onPress: () => console.log('Pressed email')
+        },
+        {
+          icon: 'coffee',
+          label: 'Substance',
+          onPress: () => console.log('Pressed email')
+        },
+        {
+          icon: 'pill',
+          label: 'Medication',
+          onPress: () => console.log('Pressed notifications')
+        }
+      ]}
+      onStateChange={nextOpen => setOpen(!open)}
+      onPress={() => {}}
+    />
   );
 }
 const styles = StyleSheet.create({
@@ -66,4 +65,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default ThinkFab;
+export default withNavigation(ThinkFab);

@@ -19,6 +19,7 @@ import FingerScreen from './screens/auth/FingerScreen';
 
 import NewPostScreen from './screens/new/NewPostScreen';
 import CalendarScreen from './screens/home/CalendarScreen';
+import NotesScreen from './screens/home/NotesScreen';
 
 const NoteStack = createStackNavigator({
   Home: HomeScreen,
@@ -27,7 +28,7 @@ const NoteStack = createStackNavigator({
 const AppDrawer = createDrawerNavigator({
   Home: NoteStack,
   Calendar: CalendarScreen,
-  Notes: TasksScreen,
+  Notes: NotesScreen,
   Tasks: TasksScreen,
   Goals: GoalsScreen,
   Medications: TasksScreen,
