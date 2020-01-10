@@ -4,6 +4,7 @@ import { withNavigation, SafeAreaView } from 'react-navigation';
 import { FAB } from 'react-native-paper';
 import MainNavbar from '../../components/home/MainNavbar';
 import NoteFeed from '../../components/home/NoteFeed';
+import NoteViewer from '../../components/home/NoteViewer';
 
 class ViewScreen extends Component {
   static navigationOptions = {
@@ -17,7 +18,7 @@ class ViewScreen extends Component {
   render() {
     return (
       <SafeAreaView style={styles.homeContainer}>
-        <Text>view screen</Text>
+        <NoteViewer />
       </SafeAreaView>
     );
   }

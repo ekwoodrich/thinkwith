@@ -1,7 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, ScrollView, RefreshControl } from 'react-native';
+import {
+  Text,
+  View,
+  ScrollView,
+  RefreshControl,
+  StyleSheet
+} from 'react-native';
 import firestore from '@react-native-firebase/firestore';
-import { Avatar, Button, Card, Title, Paragraph } from 'react-native-paper';
+import {
+  Avatar,
+  Button,
+  Card,
+  Title,
+  Paragraph,
+  Subheading
+} from 'react-native-paper';
 import { firebase } from '@react-native-firebase/auth';
 import NoteCard from './NoteCard';
 
@@ -66,9 +79,28 @@ function NoteFeed({ limit, dateStart, dateEnd }) {
         <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
       }
     >
+      <View>
+        <Subheading style={styles.feedDateSeparator}> Jan 8, 2020</Subheading>
+      </View>
       <View>{noteItems}</View>
     </ScrollView>
   );
 }
 
 export default NoteFeed;
+
+const styles = StyleSheet.create({
+  noteCard: {
+    borderRadius: 4,
+    borderWidth: 0.5,
+    borderColor: 'lightgray',
+    marginBottom: 5,
+    marginTop: 5,
+    marginLeft: 10,
+    marginRight: 10
+  },
+  feedDateSeparator: {
+    textAlign: 'center',
+    margin: 'auto'
+  }
+});
