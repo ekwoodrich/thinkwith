@@ -27,7 +27,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#404040'
   },
   button: {
-    width: 400,
     height: 36
   },
   buttonVspace: {

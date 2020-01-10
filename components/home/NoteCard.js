@@ -26,8 +26,10 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     borderWidth: 0.5,
     borderColor: 'lightgray',
-    marginBottom: 2,
-    marginTop: 2
+    marginBottom: 5,
+    marginTop: 5,
+    marginLeft: 10,
+    marginRight: 10
   }
 });
 
