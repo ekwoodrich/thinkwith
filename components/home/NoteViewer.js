@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import { Avatar, Button, Card, Title, Paragraph } from 'react-native-paper';
+import ThinkButton from '../ui/ThinkButton';
 
 const NoteViewer = ({ noteId }) => (
   <View>
@@ -10,6 +11,7 @@ const NoteViewer = ({ noteId }) => (
         <Paragraph>Viewing Note {noteId}</Paragraph>
       </Card.Content>
     </Card>
+    <ThinkButton>Delete</ThinkButton>
   </View>
 );
 
